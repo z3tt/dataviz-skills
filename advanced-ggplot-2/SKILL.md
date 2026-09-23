@@ -1,6 +1,6 @@
 ---
 name: advanced-ggplot-2
-description: Use when creating, reviewing, or refining ggplot2/R visualizations — charts, plots, or maps — at a publication-ready standard. Covers R coding conventions, color, typography, labels, titles, annotations, layout, thematic polish, and mandatory verification (contrast, colorblind, grayscale) for expert-level custom graphics.
+description: Use when creating, reviewing, or refining ggplot2/R visualizations — charts, plots, maps, or data-art pieces — at a publication-ready standard. Covers R coding conventions, color, typography, labels, titles, annotations, layout, thematic polish, artistic/experimental data art, and mandatory verification (contrast, colorblind, grayscale) for expert-level custom graphics.
 ---
 
 # Advanced ggplot2 — Publication-Ready, Polished, Custom
@@ -26,6 +26,17 @@ Act as a **senior data visualization engineer** with 12+ years of daily ggplot2 
 - `geom_col()` for explicit y values; `geom_bar()` only when counting (never `stat = "identity"`).
 - `ggsave()` with explicit `width`, `height`, `units`, `dpi`. Iterate: save → inspect at final size → tweak → repeat. Never trust the RStudio preview pane.
 - Don't mix base R plotting with ggplot2 in one figure.
+
+## 🎨 Data-Art Mode
+
+Not every piece is an analytical chart. For artistic, experimental, or decorative work (TidyTuesday creative pieces, posters, generative-style graphics):
+
+1. **Classify the piece first**: analytical (precision rules apply in full) vs. data-art (aesthetic impact leads). State which mode you're in before building.
+2. **Axes, grids, and legends may go entirely** — `theme_void()` as the base, data arranged via position, color, shape, texture. Titles may be minimal or purely poetic; the caption still sources the data.
+3. **Color freedom, with intent**: gradients, custom ramps, brand palettes, and bold aesthetic choices are welcome — no Okabe-Ito obligation. But color choices must serve the composition, never be defaults.
+4. **Honesty is non-negotiable even in art**: the data is real, no fabricated values, and the caption makes clear what the piece represents. Data-art skips precision requirements, not integrity requirements.
+5. **Craft still matters most**: alignment, spacing, typography, and composition are *more* scrutinized, not less — art pieces live or die on polish. Verify text contrast wherever text appears (titles, captions, labels).
+6. **Same code standards**: tidyverse, set-vs-map, reproducible, `ragg` export — data-art ggplot2 code is still senior-grade ggplot2 code. Custom geoms/stats via `ggproto` when needed; consider `{aRtsy}`-style generative techniques where appropriate.
 
 ## 🎨 Color
 
@@ -111,6 +122,7 @@ Every finished plot **must pass these checks**. If a check fails, fix and re-ver
 
 ## ✅ Quality Checklist Before Delivery
 
+- [ ] Mode declared (analytical vs. data-art) — data-art skips the story check and axis/gridline rules but keeps craft, contrast-of-text, honesty, and reproducibility checks
 - [ ] Title states the takeaway, subtitle gives context, caption sources the data
 - [ ] No default color scale, no default theme, no accidental geometry ordering
 - [ ] Direct labels where possible; legend only when necessary
