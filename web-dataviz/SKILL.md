@@ -1,18 +1,20 @@
 ---
-name: web-dataviz
-description: Use when building HTML-driven interactive data visualizations — standalone D3/ECharts/Observable Plot charts, embedded graphics, or scrollytelling pieces. Covers the full web-dev side including HTML boilerplate, SCSS structure, Svelte setup, responsive/accessibility requirements, and deployment.
+name: |
+  web-dataviz
+description: |
+  Use when building HTML-driven interactive data visualizations — standalone D3/ECharts/Observable Plot charts, embedded graphics, or scrollytelling pieces. Covers the full web-dev side including HTML boilerplate, SCSS structure, Svelte setup, responsive/accessibility requirements, and deployment.
 ---
 
 # Web Dataviz — HTML-Driven Interactive Visualizations
 
-Act as a **creative web developer + data visualization engineer**. Build standalone, embeddable, and scroll-driven data graphics for the web. Default stack: **plain HTML + modern CSS/SCSS + D3.js, no build step**. Escalate to Svelte only when the piece needs app-like state.
+Act as a **creative web developer + data visualization engineer**. Build standalone, embeddable, and scroll-driven data graphics for the web. Default stack: **plain HTML + modern CSS/SCSS + D3.js, no build step**. Escalate to Svelte when reactivity, shared state, or many components make plain DOM updates painful — Svelte is a thin reactive layer around D3, not a rewrite.
 
 ## 🎯 Stack Selection (in order of preference)
 
 1. **Plain HTML + D3** — the default. One self-contained `.html` file, script via CDN (`https://cdn.jsdelivr.net/npm/d3@7`), zero build. Perfect for standalones, embeds, Codepen-style demos, and most scrollytelling.
 2. **Observable Plot** — fast statistical charts when D3's low-level API is overhead (`https://cdn.jsdelivr.net/npm/@observablehq/plot`); keep D3 for scales/data wrangling underneath.
 3. **ECharts** (`echarts`) — when you need heavy canned interactivity fast (dashboards, complex linked views) and accept opinionated defaults.
-4. **Svelte + D3** — only for app-like pieces with shared state, routing, or many reactive components.
+4. **Svelte + D3** — for reactive, multi-component, or state-driven pieces. Common pattern in the dataviz community: Svelte handles DOM updates, state, and layout reactively while D3 does what it's best at (scales, shapes, joins, transitions) — this makes D3 *easier*, not harder. Don't reserve it for "app-like" complexity only; reach for it whenever manual DOM syncing in plain D3 gets tedious.
 5. **Tableau/Flourish embeds** — never; code gives control.
 
 Rule of thumb: **the simplest tool that ships.** A build step must buy real value (components, dev speed on a large piece) — otherwise it's friction.
@@ -69,7 +71,9 @@ scss/
 - Tokens over literals: never scatter hex codes through component styles.
 - Chart CSS belongs in CSS, not inline JS attributes — position/size via CSS; D3 for data-driven marks.
 
-## ⚡ Svelte Setup (the scale-up path)
+## ⚡ Svelte Setup (the reactive D3 path)
+
+Svelte's role is **reactive glue around D3**, not a replacement: D3 keeps owning scales/shapes/transitions, Svelte owns the DOM skeleton, state, and reactivity. Set up:
 
 ```bash
 npm create vite@latest my-viz -- --template svelte
