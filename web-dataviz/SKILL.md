@@ -2,7 +2,7 @@
 name: |
   web-dataviz
 description: |
-  Use when building HTML-driven interactive data visualizations — standalone D3/ECharts/Observable Plot charts, embedded graphics, or scrollytelling pieces. Covers the full web-dev side including HTML boilerplate, SCSS structure, Svelte setup, responsive/accessibility requirements, and deployment.
+  Use when building HTML-driven interactive data visualizations — standalone D3/ECharts/Observable Plot charts, embedded graphics, scrollytelling pieces, or expressive web-based art. Covers the full web-dev side including HTML boilerplate, SCSS structure, Svelte setup, responsive/accessibility requirements, and deployment, across audiences and purposes from analytical to expressive.
 ---
 
 # Web Dataviz — HTML-Driven Interactive Visualizations
@@ -87,7 +87,7 @@ npm i -D d3
 
 ## 📊 The Dataviz Layer (applies to every library)
 
-- **Reuse the dataviz-principles skill's rules**: represent-values vs distinguish-groups, title taxonomy (explanatory default), highlight-and-grey, direct labeling over legends, fixed facet scales, honest axes. The web adds: **tooltips, hover states, transitions, and scroll choreography must reveal insight, not decorate.**
+- **Reuse the dataviz-principles skill's rules**: represent-values vs distinguish-groups, title taxonomy (explanatory default), highlight-and-grey, direct labeling over legends, fixed facet scales, honest axes, and its style spectrum (analytical → custom-designed → expressive) — locate the piece first. The web adds: **tooltips, hover states, transitions, and scroll choreography must serve the piece's intent — reveal insight, or deliver delight when the piece is expressive.**
 - **Scales & data**: `d3.scale*` with explicit domains; parse dates with `d3.timeParse`, numbers via `d3.autoType`. Never trust CSV types.
 - **Responsiveness**: charts re-render on resize via `ResizeObserver` on the container (not `window.resize`), or an SVG with `viewBox` + fluid text sizing. Test at 320px, 768px, 1280px.
 - **Tooltips**: position with `getBoundingClientRect`, keep inside viewport, never cover the point, hide on `mouseleave` and `Escape`. Accessible alternative: visible labels where feasible.
@@ -154,7 +154,7 @@ steps.forEach(s => observer.observe(s));
 7. **No console errors**; fetch failures degrade to a visible error message, not a blank page.
 8. **Lighthouse pass** ≥ 90 performance / 100 accessibility for embeds (the host page shares the budget).
 9. **Slow data**: never block render on a slow CSV — skeleton or inline the critical data first.
-10. **Story check** (analytical and custom-designed pieces): a cold reader states the takeaway after ~5 seconds, before any interaction. Abstract/data-art pieces skip this — the spectrum rules from dataviz-principles apply.
+10. **Story check** (analytical and custom-designed pieces): a cold reader states the takeaway after ~5 seconds, before any interaction. Expressive pieces skip this — the style spectrum rules from dataviz-principles apply.
 
 ## ❌ Never
 
