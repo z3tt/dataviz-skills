@@ -154,7 +154,7 @@ steps.forEach(s => observer.observe(s));
 7. **No console errors**; fetch failures degrade to a visible error message, not a blank page.
 8. **Lighthouse pass** ≥ 90 performance / 100 accessibility for embeds (the host page shares the budget).
 9. **Slow data**: never block render on a slow CSV — skeleton or inline the critical data first.
-10. **Story check**: a cold reader states the takeaway after ~5 seconds, before any interaction.
+10. **Story check** (analytical and custom-designed pieces): a cold reader states the takeaway after ~5 seconds, before any interaction. Abstract/data-art pieces skip this — the spectrum rules from dataviz-principles apply.
 
 ## ❌ Never
 
