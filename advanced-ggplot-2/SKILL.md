@@ -37,6 +37,7 @@ Not every piece is a strictly analytical chart — and the distinction is a **gr
    - Axes, grids, and legends may go entirely — `theme_void()` as the base, data arranged via position, color, shape, texture. Titles may be minimal or purely poetic; the caption still sources the data.
    - Color freedom, with intent: gradients, custom ramps, bold aesthetic choices welcome — no Okabe-Ito obligation. But color must serve the composition, never be defaults.
    - Craft is scrutinized *more*, not less — alignment, spacing, typography, composition decide the piece. Verify text contrast wherever text appears.
+- **Form ≠ art.** Unusual or striking shapes (hex/tile grids, rose/petal charts, circular/stellar layouts, stream graphs) do not make a piece abstract — if the data still carries the message, it's a custom-designed analytical chart with an unusual form, and precision rules still apply. Classify by intent and message, not novelty; true abstract pieces are rare.
 
 Rules that hold across the whole spectrum:
 

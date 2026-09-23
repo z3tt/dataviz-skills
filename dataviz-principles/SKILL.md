@@ -61,6 +61,7 @@ Chart design is a **gradient, not a binary**. Locate the piece on the spectrum b
 2. **Custom-designed** — publication- or brand-styled charts and maps, poster-ready figures. Insight still leads, but visual identity matters: custom themes, curated palettes, typographic hierarchy, considered composition. Craft rules tighten; strict conventions (zero baselines, direct labeling) still apply.
 3. **Abstract / data-art** — artistic, experimental, generative pieces. Aesthetic impact leads; insight is optional. Axes, grids, legends, and the title taxonomy may go; composition and typography are scrutinized most.
 
+- **Form ≠ art.** Unusual or striking shapes (hex/tile grids, circular encodings, rose/petal charts, stream graphs, stellar maps) do not make a piece abstract — if the data still carries the message, it's a custom-designed analytical chart with an unusual form. Classify by intent and message, not novelty. True abstract pieces are rare.
 - **Not mutually exclusive** — pieces can sit between stages or mix them (e.g., a custom-designed scrollytelling piece with an abstract hero graphic). State where the piece sits rather than "choosing a mode."
 - The further along the spectrum, the more precision rules relax — but **honesty never does**: real data, no fabricated values, sources cited. Each stage drops fewer rules than the next, and none drops integrity.
 - Never present an abstract piece as an analytical one (and vice versa) — the framing itself is part of honesty.
