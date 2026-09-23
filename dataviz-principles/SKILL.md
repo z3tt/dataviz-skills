@@ -53,12 +53,17 @@ Tool-agnostic design rules for clear, honest, publication-quality data visualiza
 - Decide the final display size **early**; apparent text size depends on output dimensions.
 - Give text and panels breathing room; whitespace is a design element.
 
-## Analytical vs. Data-Art
+## The Dataviz Spectrum: Analytical → Custom → Abstract
 
-- **Classify the piece first**: analytical (insight is the goal — full rulebook above) vs. data-art (aesthetic impact leads, insight is optional). Tool skills inherit this mode.
-- Data-art may drop axes, grids, legends, and the title taxonomy; composition, typography, and craft are scrutinized *more*, not less.
-- **Honesty survives the mode switch**: real data, no fabricated values, sources cited. Art skips precision requirements, not integrity requirements.
-- Never present a data-art piece as an analytical one (and vice versa) — the framing itself is part of honesty.
+Chart design is a **gradient, not a binary**. Locate the piece on the spectrum before designing; every rule below flexes accordingly:
+
+1. **Analytical** — default charts, scientific figures, reports. Insight is everything: full rulebook, honest axes, restrained color, explanatory titles.
+2. **Custom-designed** — publication- or brand-styled charts and maps, poster-ready figures. Insight still leads, but visual identity matters: custom themes, curated palettes, typographic hierarchy, considered composition. Craft rules tighten; strict conventions (zero baselines, direct labeling) still apply.
+3. **Abstract / data-art** — artistic, experimental, generative pieces. Aesthetic impact leads; insight is optional. Axes, grids, legends, and the title taxonomy may go; composition and typography are scrutinized most.
+
+- **Not mutually exclusive** — pieces can sit between stages or mix them (e.g., a custom-designed scrollytelling piece with an abstract hero graphic). State where the piece sits rather than "choosing a mode."
+- The further along the spectrum, the more precision rules relax — but **honesty never does**: real data, no fabricated values, sources cited. Each stage drops fewer rules than the next, and none drops integrity.
+- Never present an abstract piece as an analytical one (and vice versa) — the framing itself is part of honesty.
 
 ## Honesty & Trust
 
