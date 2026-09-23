@@ -2,12 +2,12 @@
 name: |
   dataviz-principles
 description: |
-  Use when making decisions about chart design independent of any specific tool — what to plot, which chart type, color semantics, titles, hierarchy, layout, and accessibility. Load before choosing encodings or reviewing a chart's design at the principles level.
+  Use when making decisions about chart design independent of any specific tool — what to plot, which chart type, color semantics, titles, hierarchy, layout, and accessibility — for analytical charts and data-art pieces alike. Load before choosing encodings or reviewing a chart's design at the principles level.
 ---
 
 # Dataviz Principles
 
-Tool-agnostic design rules for clear, honest, publication-quality data visualization. No code here — pair this with a tool-specific skill (e.g. advanced-ggplot-2) for implementation.
+Tool-agnostic design rules for clear, honest, publication-quality data visualization — covering both analytical charts and expressive data art. No code here — pair this with a tool-specific skill (e.g. advanced-ggplot-2, web-dataviz) for implementation.
 
 ## First Principles
 
@@ -52,6 +52,13 @@ Tool-agnostic design rules for clear, honest, publication-quality data visualiza
 - Composition needs an overarching labeling structure (tags, shared titles).
 - Decide the final display size **early**; apparent text size depends on output dimensions.
 - Give text and panels breathing room; whitespace is a design element.
+
+## Analytical vs. Data-Art
+
+- **Classify the piece first**: analytical (insight is the goal — full rulebook above) vs. data-art (aesthetic impact leads, insight is optional). Tool skills inherit this mode.
+- Data-art may drop axes, grids, legends, and the title taxonomy; composition, typography, and craft are scrutinized *more*, not less.
+- **Honesty survives the mode switch**: real data, no fabricated values, sources cited. Art skips precision requirements, not integrity requirements.
+- Never present a data-art piece as an analytical one (and vice versa) — the framing itself is part of honesty.
 
 ## Honesty & Trust
 
