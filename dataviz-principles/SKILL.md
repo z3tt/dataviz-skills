@@ -11,7 +11,7 @@ Tool-agnostic design rules for clear, honest, publication-quality data visualiza
 
 ## First Principles
 
-- **Every visual element must represent data.** Remove anything decorative that doesn't serve a purpose.
+- **The data is the hero — but not the only actor.** Everything decorative that serves no purpose is removed; decoration that earns its place (engagement, identity, memorability) is welcome. This is not minimalism for its own sake — flair and accuracy aren't opposites.
 - **One insight per chart.** If it feels crowded, split into small multiples.
 - **Order categorical values by what they represent**, not alphabetically.
 - **The audience decides:** dashboards → descriptive; reports/slides → explanatory; web/social → narrative.
