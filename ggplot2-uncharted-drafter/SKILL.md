@@ -51,12 +51,13 @@ Recurring **Content section flow** (adapt, don't force):
 | `simple-highlight-purple` / `-blue` | occasional special terms |
 | `simple-highlight-black` / `-white` | code-like/neutral emphasis |
 
-Wrap highlighted words with `&nbsp;`/`&ensp;` padding inside the span.
+Wrap highlighted words with `&nbsp;`/`&ensp;` padding inside the span. Colors and styling come from the SCSS — use the classes, never inline hex values for highlights.
 
-**Course color set** (from the SCSS; use these — never other colors — when lessons need inline colors):
-- **Set 1 (dark variants):** red `#d13760`, orange `#e75f00`, gold `#c69612`, teal `#00978a`, blue `#006d93`, purple `#663e8e`
-- **Set 2 (light variants, used as highlight backgrounds):** red `#ff8da3`, orange `#ffa693`, gold `#f8c663`, teal `#88ebdd`, blue `#a0d5ff`, purple `#d8bbff`
-- Highlight classes pull from Set 2 (`simple-highlight-purple`/`-black` force `color: #000`); Tailwind grays (`--color-gray-*`) for neutral chrome.
+**Course color palette for R code examples** — when a lesson's sandbox code needs explicit colors, suggest the six course hues (dark set):
+
+red `#d13760` · orange `#e75f00` · gold `#c69612` · teal `#00978a` · blue `#006d93` · purple `#663e8e`
+
+(Light variants exist in the SCSS as `--set2-*` for backgrounds.) Suggestions, not a mandate — keep default ggplot2 behavior where the lesson doesn't care about specific colors.
 
 ### 4. Components
 
