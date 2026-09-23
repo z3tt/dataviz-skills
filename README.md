@@ -15,6 +15,7 @@ them into a system prompt.
 |---|---|
 | **dataviz-principles** | Tool-agnostic design principles: chart choice, color semantics, titles, layout, honesty — no code |
 | **advanced-ggplot-2** | Publication-ready ggplot2/R: coding conventions, theming, palettes, annotations, maps, export, and a mandatory verification pipeline (contrast, colorblind, grayscale) |
+| **web-dataviz** | HTML-driven interactive visualizations: plain HTML+D3 boilerplate, SCSS structure, Svelte setup, scrollytelling (IntersectionObserver/scrollama), embedding, a11y & deployment |
 | **ggplot2-uncharted-drafter** | Internal skill for drafting lessons of the ggplot2 [un]charted course in `.tsx` (house style, components, exercises) |
 
 ## Install
@@ -29,8 +30,9 @@ cp dataviz-skills/dataviz-principles/SKILL.md ~/.claude/skills/dataviz-principle
 
 ## Usage notes
 
-- `dataviz-principles` works in *any* AI tool — it contains no code.
+- `dataviz-principles` works in **any** AI tool — it contains no code.
 - `advanced-ggplot-2` works in any code-capable assistant working in R.
+- `web-dataviz` works in any assistant that can write and ship web code.
 - `ggplot2-uncharted-drafter` is only useful with access to the course repo.
 
 ## License
