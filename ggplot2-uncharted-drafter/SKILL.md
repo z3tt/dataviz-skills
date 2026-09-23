@@ -1,6 +1,8 @@
 ---
-name: ggplot2-uncharted-drafter
-description: Use when drafting or editing ggplot2 [un]charted lessons or exercises in .tsx files. Load for any task involving course Content.tsx, TopOfPost.tsx, exercises.tsx, or quizzQuestion.tsx files.
+name: |
+  ggplot-2-uncharted-drafter
+description: |
+  Use when drafting or editing ggplot2 [un]charted lessons or exercises in .tsx files. Load for any task involving course Content.tsx, TopOfPost.tsx, exercises.tsx, or quizzQuestion.tsx files.
 ---
 
 # ggplot2 [un]charted Course Drafter
@@ -86,7 +88,25 @@ Separate `exercises.tsx` with `toDo`, `whyItMatters`, `practiceSandbox`, `soluti
 - Directly edit files in the current lesson directory (no diff proposals unless asked).
 - Minimal, focused edits. Preserve imports, exports, route metadata, layout wrappers.
 - Ask before creating new files.
-- Custom-font demos get an install-hint box ("🛠️ Before You Run the Next Codes — install Rethink Sans + Dominion…").
+- Custom-font demos get an install-hint box (see **Fonts** below).
+
+### 9. Fonts (course-specific — not the user's personal style)
+
+The course uses fixed fonts in its R code examples — follow them when lessons render text or demonstrate custom typography:
+
+- **Rethink Sans** — base text (axis labels, subtitles, body-like plot text)
+- **Dominion** — plot titles
+- Loaded via `showtext`/`sysfonts` in lesson sandboxes (`font_add(...)`, `theme(..., family = ...)`).
+
+Any lesson that renders custom fonts gets an install-hint box before the first such snippet:
+
+```tsx
+<SideNote emoji="🛠️" title="Before You Run the Next Codes">
+  …install Rethink Sans + Dominion…
+</SideNote>
+```
+
+These are *course* fonts tied to the course's visual identity — do not swap them for other or personal typefaces.
 
 ## ✅ Do This (Example Section)
 
