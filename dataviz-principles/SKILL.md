@@ -70,6 +70,14 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 - Give text and panels breathing room; whitespace is a design element.
 - Craft matters more, not less, as pieces become more expressive — alignment, spacing, and typography carry expressive work.
 
+## Favorite Aesthetics (suggestions, never requirements)
+
+Defaults to reach for when nothing is specified, or when the user asks for "my favorites" — they exist so the user doesn't have to pass them every time. **Any explicit user choice always overrides these.**
+
+- **Corporate typefaces** (brand contexts): Anormal Sans (⚠️ restricted license, bought from Future Fonts — check embedding terms before web/export use), Recursive, Recursive Mono.
+- **Regularly used in charts** (pick to fit the piece's voice): Bricolage Grotesque, Atkinson Hyperlegible (also the accessibility-friendly choice), Gabarito, Asap SemiCondensed (dense labels/small panels), Big Shoulders (display/titles), Epilogue, Strichpunkt Sans, Rasa, Caladea (serif), Faune.
+- These are starting points, not a house style — curate per piece as always.
+
 ## Honesty & Craft
 
 - Zooming ≠ filtering: know which one the tool does; both are legitimate but different intents.
