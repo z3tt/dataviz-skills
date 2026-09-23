@@ -95,14 +95,14 @@ Separate `exercises.tsx` with `toDo`, `whyItMatters`, `practiceSandbox`, `soluti
 The course uses fixed fonts in its R code examples — follow them when lessons render text or demonstrate custom typography:
 
 - **Rethink Sans** — base text (axis labels, subtitles, body-like plot text)
-- **Dominion** — plot titles
+- **Domine** — plot titles
 - Loaded via `showtext`/`sysfonts` in lesson sandboxes (`font_add(...)`, `theme(..., family = ...)`).
 
 Any lesson that renders custom fonts gets an install-hint box before the first such snippet:
 
 ```tsx
 <SideNote emoji="🛠️" title="Before You Run the Next Codes">
-  …install Rethink Sans + Dominion…
+  …install Rethink Sans + Domine…
 </SideNote>
 ```
 
