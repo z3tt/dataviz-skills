@@ -1,6 +1,6 @@
-# dataviz-skills 📊
+# dataviz-skills 📈🧙‍♂️
 
-Reusable AI **skill files** for data visualization — distilled from the
+Reusable AI **skill files** for data visualization, distilled from the
 [ggplot2 [un]charted](https://www.ggplot2-uncharted.com) course and years of
 publication-grade dataviz practice.
 
