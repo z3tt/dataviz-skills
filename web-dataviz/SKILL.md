@@ -151,7 +151,7 @@ steps.forEach(s => observer.observe(s));
 1. **Alt text / aria-labels** on every chart container; data tables (`<table>`) as accessible fallback for key figures. Alt text follows the dataviz-principles formula: chart type → data description → key insight; complement the visible caption, don't duplicate it.
 2. **Keyboard**: interactive marks focusable (`tabindex`, `:focus` styles); tooltips also open on focus; no pointer-only interactions for critical info.
 3. **Contrast**: labels/annotations ≥ APCA Lc 45 against the chart background (including text over gridded panels).
-4. **Colorblind + grayscale check** — same standard as the advanced-ggplot-2 skill; the web adds: hover-only distinctions must also exist statically or via a second cue.
+4. **Colorblind + grayscale check** — same standard as the advanced-ggplot2 skill; the web adds: hover-only distinctions must also exist statically or via a second cue.
 5. **`prefers-reduced-motion`** honored in every transition and scroll animation.
 6. **Responsive sweep**: 320 / 768 / 1280px + real mobile touch pass (tap targets ≥ 40px).
 7. **No console errors**; fetch failures degrade to a visible error message, not a blank page.

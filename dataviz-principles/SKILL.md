@@ -9,7 +9,7 @@ metadata:
 
 # Dataviz Principles
 
-Tool-agnostic design rules for clear, honest, engaging data visualization across audiences, purposes, styles, and chart types. No code here — pair this with a tool-specific skill (e.g. advanced-ggplot-2, web-dataviz) for implementation.
+Tool-agnostic design rules for clear, honest, engaging data visualization across audiences, purposes, styles, and chart types. No code here — pair this with a tool-specific skill (e.g. advanced-ggplot2, web-dataviz) for implementation.
 
 ## Start with Three Questions
 

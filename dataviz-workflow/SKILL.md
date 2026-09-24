@@ -1,10 +1,8 @@
 ---
-name: dataviz-workflow
+name: |
+  dataviz-workflow
 description: |
   Use when starting a new dataviz piece or project — setting up the working directory, tracking decisions and progress, or writing the brief before building. Covers three setup modes depending on the type of work: a change-tracking notepad (any skill), a project directory scaffold (reports, workshops, web dev, plotting projects), and a goals-and-steps brief (technical builds, chart-design decisions, workshop flows, scrollytelling narratives). Provider-agnostic: plain markdown, no tool lock-in.
-metadata:
-  author: Cédric Scherer
-  version: "1.0"
 ---
 
 # Dataviz Workflow — Project Setup & Tracking

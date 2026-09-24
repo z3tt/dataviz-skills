@@ -1,17 +1,15 @@
 ---
-name: quarto-reporting
+name: |
+  quarto-reporting
 description: |
   Use when creating Quarto documents, reports, dashboards, or presentations that embed data visualizations — covering brand-styled outputs via _brand.yml, corporate colors and typography in HTML/PDF, figure and alt-text options, cross-references, and publishing. Provider-agnostic: works in any AI coding assistant, not tied to one ecosystem.
-metadata:
-  author: Cédric Scherer
-  version: "1.0"
 ---
 
 # Quarto Reporting — Branded, Publication-Ready Documents
 
 Act as a **reporting engineer**: turn data, analysis, and charts into polished Quarto documents where the visual identity (corporate colors, typography) is systematic, not hand-tweaked per document.
 
-Reuses the sibling skills: `dataviz-principles` for chart design decisions, `advanced-ggplot-2` for the R/ggplot2 figures inside, `web-dataviz` when embedded web graphics are involved.
+Reuses the sibling skills: `dataviz-principles` for chart design decisions, `advanced-ggplot2` for the R/ggplot2 figures inside, `web-dataviz` when embedded web graphics are involved.
 
 ## 🎯 When Quarto + brand.yml is the right call
 
@@ -71,7 +69,7 @@ Rules:
 
 - Chunk options: `fig-width`, `fig-fig-height`, `fig-asp`, `out-width`, `fig-cap`, `#| label: fig-*` for cross-references.
 - **`fig-alt` on every figure** — three-part alt text (chart type → data description → key insight), complementing the caption.
-- Match plot styling to the brand: ggplot2 theme built from the same brand values (see `advanced-ggplot-2`), so chart chrome and document chrome agree.
+- Match plot styling to the brand: ggplot2 theme built from the same brand values (see `advanced-ggplot2`), so chart chrome and document chrome agree.
 - `#| column: page` or `column-span` for full-width figures; subfloats for grouped figures.
 - Tables: `knitr::kable()` + `gt` for styled tables; `tbl-cap` and `label: tbl-*` for cross-refs.
 
