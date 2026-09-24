@@ -56,7 +56,7 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 ## Color
 
 - **The core question: does color *represent values* (encoded scale, reader decodes via legend/gradient) or *distinguish groups* (categorical hues of similar perceptual weight, no implied order)?** The palette type follows.
-- Qualitative: unique hues, equal visual weight, ~5–8 categories max.
+- Qualitative: unique hues, equal visual weight. No strict cap, but the more categories, the worse it reads — past ~4–6 start considering other solutions (faceting, grouping, small multiples); 8 is the practical ceiling.
 - Sequential (low→high): single- or multi-hue gradient, perceptually uniform.
 - Diverging (deviation from a meaningful center): two opposing hues around a neutral midpoint, set deliberately.
 - **Never rainbow**; avoid red-green; consider colorblind accessibility at every stage of the spectrum.

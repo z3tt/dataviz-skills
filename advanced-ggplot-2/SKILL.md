@@ -52,7 +52,7 @@ Rules that hold across the whole spectrum:
 - **Preferred qualitative**: Okabe-Ito (colorblind-safe), scico colorblind palettes, carefully curated custom brand palettes.
 - **Sequential data**: perceptually uniform, single-hue or multi-hue gradients — `scico`, `viridis`-family, or custom ramps designed for the data range and medium.
 - **Diverging data**: diverging ramps with a meaningful midpoint (zero, average, reference value) — never a default red-green pairing. State the midpoint in the caption if not obvious.
-- **Mute and limit**: gray for context series, strong hues only for the data that carries the message ("highlight and grey"). Cap categorical colors at ~6–8; beyond that, facet or group.
+- **Mute and limit**: gray for context series, strong hues only for the data that carries the message ("highlight and grey"). No strict categorical cap, but the more categories, the worse it reads — past ~4–6 start faceting or grouping; 8 is the practical ceiling.
 - Set color via `scale_*_manual()` with named vectors or shared palette objects for consistency across figures.
 - Check lightness contrast against background — especially text labels placed on filled areas.
 - Rainbow/`rainbow()`/jet-style ramps are never acceptable for continuous or ordered data.
