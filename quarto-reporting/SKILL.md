@@ -1,6 +1,5 @@
 ---
-name: |
-  quarto-reporting
+name: quarto-reporting
 description: |
   Use when creating Quarto documents, reports, dashboards, or presentations that embed data visualizations — covering brand-styled outputs via _brand.yml, corporate colors and typography in HTML/PDF, figure and alt-text options, cross-references, and publishing. Provider-agnostic: works in any AI coding assistant, not tied to one ecosystem.
 ---
@@ -51,7 +50,8 @@ typography:
   fonts:
     - family: Recursive
       source: google
-      weight: [400, 600]
+      wei
+ght: [400, 600]
   base: Recursive
   headings:
     family: Recursive
@@ -87,6 +87,7 @@ Rules:
 2. **Brand consistency sweep**: no stray default colors (e.g., default bootstrap blue), no unbranded headings.
 3. **Alt text present** on every figure; captions non-duplicated.
 4. **Cross-references resolve** — no ?? in output.
+
 5. **Font embedding** in PDFs verified (licensed fonts embedded per license terms).
 6. Story check: a cold reader gets the document's takeaway from headings + figures alone.
 

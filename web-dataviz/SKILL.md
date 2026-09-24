@@ -1,6 +1,5 @@
 ---
-name: |
-  web-dataviz
+name: web-dataviz
 description: |
   Use when building HTML-driven interactive data visualizations — standalone D3/ECharts/Observable Plot charts, embedded graphics, scrollytelling pieces, or expressive web-based art. Covers the full web-dev side including HTML boilerplate, SCSS structure, Svelte setup, responsive/accessibility requirements, and deployment, across audiences and purposes from analytical to expressive.
 metadata:
@@ -20,7 +19,8 @@ Act as a **creative web developer + data visualization engineer**. Build standal
 4. **Svelte + D3** — for reactive, multi-component, or state-driven pieces. Common pattern in the dataviz community: Svelte handles DOM updates, state, and layout reactively while D3 does what it's best at (scales, shapes, joins, transitions) — this makes D3 *easier*, not harder. Don't reserve it for "app-like" complexity only; reach for it whenever manual DOM syncing in plain D3 gets tedious.
 5. **Tableau/Flourish embeds** — never; code gives control.
 
-Rule of thumb: **the simplest tool that ships.** A build step must buy real value (components, dev speed on a large piece) — otherwise it's friction.
+Rule of thumb: **the simplest tool th
+at ships.** A build step must buy real value (components, dev speed on a large piece) — otherwise it's friction.
 
 ## 🏗️ Plain HTML Boilerplate (memorize this shape)
 
@@ -72,7 +72,8 @@ scss/
 
 - Compile with `sass scss/main.scss css/main.css` (Dart Sass, `@use` not `@import`).
 - Tokens over literals: never scatter hex codes through component styles.
-- Chart CSS belongs in CSS, not inline JS attributes — position/size via CSS; D3 for data-driven marks.
+- Chart CSS belongs in CSS
+, not inline JS attributes — position/size via CSS; D3 for data-driven marks.
 
 ## ⚡ Svelte Setup (the reactive D3 path)
 
@@ -94,7 +95,8 @@ npm i -D d3
 - **Scales & data**: `d3.scale*` with explicit domains; parse dates with `d3.timeParse`, numbers via `d3.autoType`. Never trust CSV types.
 - **Responsiveness**: charts re-render on resize via `ResizeObserver` on the container (not `window.resize`), or an SVG with `viewBox` + fluid text sizing. Test at 320px, 768px, 1280px.
 - **Tooltips**: position with `getBoundingClientRect`, keep inside viewport, never cover the point, hide on `mouseleave` and `Escape`. Accessible alternative: visible labels where feasible.
-- **Transitions**: 250–750ms, ease (`d3.easeCubicOut` default), respect `prefers-reduced-motion: reduce` → snap instantly.
+- **Transitions**: 250–750ms, ease (`d3.easeCubicOut` default), respect `prefers-reduced
+-motion: reduce` → snap instantly.
 
 ## 🎬 Scrollytelling
 
@@ -140,7 +142,8 @@ steps.forEach(s => observer.observe(s));
 
 ## 🌐 Getting It Online
 
-- **GitHub Pages** (zero-cost default): repo → Settings → Pages → deploy from `main` `/root` (or `/docs`). Single-file pieces: just push. Custom domain + HTTPS via the same panel.
+- **GitHub Pages** (zero-cost default): repo → Settings → Pages → deploy from `main` `/root` (or `/docs`). Single-file pieces: just push. Custom domain + HTTPS via the same panel
+.
 - **Netlify/Vercel** when you need preview deploys per branch or Svelte builds: connect repo, build command `npm run build`, publish `dist/`.
 - **Embedding elsewhere**: standalone file = `<iframe src="https://…/chart.html" title="…" loading="lazy" style="width:100%;border:0"></iframe>`; size the iframe responsively (aspect-ratio wrapper). PostMessage for iframe↔host height communication; **avoid** `document.write`-era embeds.
 - Relative paths everywhere (`./data.csv`), lowercase filenames, no spaces — survives any host.
@@ -157,7 +160,8 @@ steps.forEach(s => observer.observe(s));
 7. **No console errors**; fetch failures degrade to a visible error message, not a blank page.
 8. **Lighthouse pass** ≥ 90 performance / 100 accessibility for embeds (the host page shares the budget).
 9. **Slow data**: never block render on a slow CSV — skeleton or inline the critical data first.
-10. **Story check** (analytical and custom-designed pieces): a cold reader states the takeaway after ~5 seconds, before any interaction. Expressive pieces skip this — the style spectrum rules from dataviz-principles apply.
+10. **Story check** (analytica
+l and custom-designed pieces): a cold reader states the takeaway after ~5 seconds, before any interaction. Expressive pieces skip this — the style spectrum rules from dataviz-principles apply.
 
 ## ❌ Never
 

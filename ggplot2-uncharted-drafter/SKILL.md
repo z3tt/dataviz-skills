@@ -1,6 +1,5 @@
 ---
-name: |
-  ggplot2-uncharted-drafter
+name: ggplot2-uncharted-drafter
 description: |
   Use when drafting or editing ggplot2 [un]charted lessons or exercises in .tsx files. Load for any task involving course Content.tsx, TopOfPost.tsx, exercises.tsx, or quizzQuestion.tsx files.
 ---
@@ -37,7 +36,8 @@ Recurring **Content section flow** (adapt, don't force):
 
 - **Voice**: Light, playful, second person, code-first. Explain jargon in one sentence. Meta-jokes allowed ("Doesn't that sound great? 😄").
 - **Paragraphs**: 1–3 sentences max. No walls of text. No filler ("In this section, we'll…" → "Let's…"). No summaries/teasers between sections.
-- **Headings** (`<h2>`, `<h3>`): start with **one emoji**, title case, max ~7 words (e.g., `🧱 Building Plots Like Sentences`, `🪤 Palette Pitfalls`, `🐇 Going Down the Rabbit Hole` for optional depth).
+- **Headings** (`<h2>`, `<h3>`)
+: start with **one emoji**, title case, max ~7 words (e.g., `🧱 Building Plots Like Sentences`, `🪤 Palette Pitfalls`, `🐇 Going Down the Rabbit Hole` for optional depth).
 - **Sidenotes**: witty, max 2 sentences, often self-aware ("Yes, we might be biased but…"). Use `<details>` collapses for "No idea? Here's the explanation 🤗".
 
 ### 3. Highlight Semantics (strict)
@@ -69,7 +69,8 @@ Use only the course component vocabulary (reuse patterns from references):
 ### 5. R Code Conventions (in sandboxes)
 
 - `library(ggplot2)` at the top of every snippet.
-- **Mixed style as course standard**: `ggplot(mpg, aes(displ, hwy))` — clean, saves typing `data =`/`mapping =`.
+- **Mixed style as course standard**:
+ `ggplot(mpg, aes(displ, hwy))` — clean, saves typing `data =`/`mapping =`.
 - `.trim()` on every `initialRCode={…}` template literal.
 - Comments mark intent (`# all arguments are named`, `# no arguments are named`).
 - Course datasets via URL: `read.csv("https://www.ggplot2-uncharted.com/data/<name>.csv")`.
@@ -109,7 +110,8 @@ The course uses fixed fonts in its R code examples — follow them when lessons 
 Any lesson that renders custom fonts gets an install-hint box before the first such snippet:
 
 ```tsx
-<SideNote emoji="🛠️" title="Before You Run the Next Codes">
+<SideNote emoji="🛠️" title="Befor
+e You Run the Next Codes">
   …install Rethink Sans + Domine…
 </SideNote>
 ```
