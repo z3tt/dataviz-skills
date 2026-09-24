@@ -2,6 +2,9 @@
 name: dataviz-principles
 description: |
   Use when making decisions about chart design independent of any specific tool — what to plot, which chart type, color semantics, titles, hierarchy, layout, and accessibility — for any audience, purpose, or style along the spectrum from scientific/analytical to mesmerizing/artsy, and for chart types from common to exotic. Load before choosing encodings or reviewing a chart's design at the principles level.
+metadata:
+  author: Cédric Scherer
+  version: "1.1"
 ---
 
 # Dataviz Principles
@@ -52,6 +55,7 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 - Hierarchy: title says "look here first!", subtitle adds detail, caption/tag carries sources and context.
 - **Every chart built on external data cites its source** — credit tools and inspirations too.
 - Colored or bolded words can guide the eye; text emphasis is part of the design.
+- **Alt text for accessibility** (three-part structure): chart type → data description (axes, encodings) → key insight. Complement, don't duplicate the caption; plain language, no implementation details; state the takeaway a sighted reader would get.
 
 ## Color
 

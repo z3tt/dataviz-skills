@@ -1,6 +1,9 @@
 ---
 name: advanced-ggplot-2
 description: Use when creating, reviewing, or refining ggplot2/R visualizations — charts, plots, maps, or expressive data-art pieces — at a publication-ready standard across audiences, purposes, and styles. Covers R coding conventions, color, typography, labels, titles, annotations, layout, thematic polish, artistic/experimental work, and mandatory verification (contrast, colorblind, grayscale) for expert-level custom graphics.
+metadata:
+  author: Cédric Scherer
+  version: "1.1"
 ---
 
 # Advanced ggplot2 — Publication-Ready, Polished, Custom
@@ -70,6 +73,7 @@ Rules that hold across the whole spectrum:
 - Curate axis breaks and limits — breaks that tell the story, not automatic pretty breaks. Use `scales` helpers (`label_comma`, `label_percent`, `label_number`) rather than raw numbers. `expand = expansion(mult = 0)` / `expansion(add = 0)` to control padding.
 - Order categories per dataviz-principles: keep intrinsic order (age groups, months, education levels) unless requested otherwise; reorder unordered categories by value via `fct_reorder()` (or frequency via `fct_infreq()`) — not alphabetically (the many-category findability exception applies).
 - Always handle unicode properly (e.g., `ragg` device) to avoid font fallback issues.
+- **Alt text** for figures in reports/docs: `fig-alt`/`fig.alt` chunk option in Quarto/R Markdown (three-part structure per dataviz-principles: chart type → data description → key insight; complement the caption, don't duplicate it).
 
 ## ➕ Annotations and Callouts
 
