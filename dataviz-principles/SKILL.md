@@ -41,7 +41,8 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 - Think in *data → aesthetic mappings*, not "make a bar chart." Encodings first, chart type second.
 - Prefer position- and length-based encodings over area/angle/color-only encodings when precision matters; let aesthetic goals promote otherwise.
 - Bars and areas need a zero baseline; avoid truncated axes for them. Truncation elsewhere needs a visual cue and a stated reason.
-- **Order categories by what they represent, not alphabetically.** Check for intrinsic order first: categories with a natural sequence (age groups, months, education levels) keep that order; categories without one (countries, species, products) order by the data — value, frequency, or relevance. Intrinsic order is a strong default, not a law — re-ordering even months or age groups by value can reveal a pattern that the natural sequence hides.
+- **Order categories by what they represent, not alphabetically.** Categories with an intrinsic sequence (age groups, months, education levels) keep that order; categories without one (countries, species, products) order by the data — value, frequency, or relevance.
+- Intrinsic order is a strong default, not a law — re-ordering even months or age groups by value can reveal a pattern the natural sequence hides.
 - Direct labeling instead of legends when possible (< ~4 groups).
 - Small multiples over one overloaded chart; exotic forms (tile/hex grids, cartograms) when real geography or layout would distort the message.
 - Consistency is key: keep scales **fixed across panels**; "free" axes only when within-panel trends matter far more than cross-panel comparison.
