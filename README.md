@@ -49,7 +49,8 @@ cp dataviz-skills/dataviz-principles/SKILL.md ~/.claude/skills/dataviz-principle
 - `dataviz-principles` works in **any** AI tool — it contains no code rules.
 - `advanced-ggplot2` works in any code-capable assistant working in R.
 - `web-dataviz` works in any assistant that can write and ship web code.
-- `quarto-reporting` and `dataviz-workflow` are tool-agnostic markdown workflows.
+- `quarto-reporting` needs an assistant that can write Quarto markdown and render documents.
+- `dataviz-workflow` is tool-agnostic — plain markdown, no code at all.
 - `ggplot2-uncharted-drafter` is only useful with access to the course repo.
 
 ## License
