@@ -1,6 +1,6 @@
 ---
 name: |
-  ggplot-2-uncharted-drafter
+  ggplot2-uncharted-drafter
 description: |
   Use when drafting or editing ggplot2 [un]charted lessons or exercises in .tsx files. Load for any task involving course Content.tsx, TopOfPost.tsx, exercises.tsx, or quizzQuestion.tsx files.
 ---
