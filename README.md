@@ -14,7 +14,7 @@ them into a system prompt.
 | Skill | Scope |
 |---|---|
 | **dataviz-principles** | Tool-agnostic design principles: chart choice, color semantics, titles, layout, honesty — no code |
-| **advanced-ggplot-2** | Publication-ready ggplot2/R: coding conventions, theming, palettes, annotations, maps, export, and a mandatory verification pipeline (contrast, colorblind, grayscale) |
+| **advanced-ggplot-2** | Publication-ready plots with ggplot2: coding conventions, theming, palettes, annotations, maps, export, and a mandatory verification pipeline (contrast, colorblind, grayscale) |
 | **web-dataviz** | HTML-driven interactive visualizations: plain HTML+D3 boilerplate, SCSS structure, Svelte setup, scrollytelling (IntersectionObserver/scrollama), embedding, a11y & deployment |
 | **ggplot2-uncharted-drafter** | Internal skill for drafting lessons of the ggplot2 [un]charted course in `.tsx` (house style, components, exercises) |
 
