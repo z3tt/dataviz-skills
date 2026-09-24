@@ -76,6 +76,13 @@ Defaults to reach for when nothing is specified, or when the user asks for "my f
 
 - **Corporate typefaces** (brand contexts): Anormal Sans (⚠️ restricted license, bought from Future Fonts — check embedding terms before web/export use), Recursive, Recursive Mono.
 - **Regularly used in charts** (pick to fit the piece's voice): Bricolage Grotesque, Atkinson Hyperlegible (also the accessibility-friendly choice), Gabarito, Asap SemiCondensed (dense labels/small panels), Big Shoulders (display/titles), Epilogue, Strichpunkt Sans, Rasa, Caladea (serif), Faune.
+- **Corporate color set** — the five mains form a ready qualitative palette: similar visual weight, tested colorblind-safe at the time. Each comes in four shades (darker / **main** / lighter / lightest) for emphasis steps, sequential ramps, or highlight-vs-muted pairings:
+  - **Jungle Green** `#1D785A` / **`#28A87D`** / `#5ACDA6` / `#D9F6EC` — corporate main
+  - **American Yellow** `#B48200` / **`#EFAC00`** / `#FFCE52` / `#FFEDC2` — corporate main
+  - **Lavender Indigo** `#663399` / **`#9C55E3`** / `#B988EB` / `#E6D9F2` — corporate main
+  - **Blue Bolt** `#007CB1` / **`#00B3FF`** / `#62D0FF` / `#C9EFFF` — secondary (not in the logo, part of the set)
+  - **Dark Liver (grey)** `#292929` / `#505050` / `#818181` / `#D3D3D3` — neutral, for de-emphasized categories ("grey for everything else")
+  - ⚠️ The colorblind-safety verdict is from the original testing — re-verify (grayscale + deuteranopia) for each concrete application rather than assuming it transfers.
 - These are starting points, not a house style — curate per piece as always.
 
 ## Honesty & Craft
