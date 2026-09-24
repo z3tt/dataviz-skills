@@ -39,11 +39,11 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 ## Chart Choice
 
 - Think in *data → aesthetic mappings*, not "make a bar chart." Encodings first, chart type second.
-- Prefer position- and length-based encodings over area/angle/color-only encodings when precision matters; let aesthetic goals promote otherwise.
-- Bars and areas need a zero baseline; avoid truncated axes for them. Truncation elsewhere needs a visual cue and a stated reason.
+- **Prefer position- and length-based encodings** over area/angle/color-only encodings when precision matters; let aesthetic goals promote otherwise.
+- **Bars and areas need a zero baseline**; avoid truncated axes for them. Truncation elsewhere needs a visual cue and a stated reason.
 - **Order categories by what they represent, not alphabetically.** Intrinsic order (age groups, months, education levels) → keep it unless requested otherwise. No intrinsic order (species, products) → order by value, frequency, or relevance. Exception: with many categories (countries, states), alphabetical can serve the reader better — finding one's own entry beats ranking. A meaningful default, not a law — exceptions are always fine when the reasoning is valid and it improves storytelling and readability.
-- Direct labeling instead of legends when possible (< ~4 groups).
-- Small multiples over one overloaded chart; exotic forms (tile/hex grids, cartograms) when real geography or layout would distort the message.
+- Direct labeling instead of legends when possible. Place direct labels close to the most recent values (e.g. end of the lines) or at peak metrics (e.g. maximum line spike, largest area in a stacked area chart).
+- Small multiples over one overloaded chart; exotic forms (tile/hex grids, cartograms) when real geography or layout would distort the message. If feasible, add "other" data as a shaded background layer to simplify comparison for readers.
 - Consistency is key: keep scales **fixed across panels**; "free" axes only when within-panel trends matter far more than cross-panel comparison.
 
 ## Titles & Text
@@ -59,7 +59,7 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 - Qualitative: unique hues, equal visual weight, ~5–8 categories max.
 - Sequential (low→high): single- or multi-hue gradient, perceptually uniform.
 - Diverging (deviation from a meaningful center): two opposing hues around a neutral midpoint, set deliberately.
-- **Never rainbow**; avoid red-green; consider colorblind accessibility at every stage of the spectrum.
+- **Never use rainbow** or related palettes; avoid red-green; consider colorblind accessibility at every stage of the spectrum.
 - For emphasis: one highlight color, grey for everything else ("highlight and grey").
 - Palettes are starting points — tweak and subset to fit the data; expressive pieces gain color freedom but keep intent and contrast.
 
