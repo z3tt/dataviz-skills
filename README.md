@@ -30,7 +30,7 @@ cp dataviz-skills/dataviz-principles/SKILL.md ~/.claude/skills/dataviz-principle
 
 ## Usage notes
 
-- `dataviz-principles` works in **any** AI tool — it contains no code.
+- `dataviz-principles` works in **any** AI tool — it contains no code rules.
 - `advanced-ggplot-2` works in any code-capable assistant working in R.
 - `web-dataviz` works in any assistant that can write and ship web code.
 - `ggplot2-uncharted-drafter` is only useful with access to the course repo.
