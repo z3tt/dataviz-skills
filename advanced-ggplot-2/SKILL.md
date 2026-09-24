@@ -68,7 +68,7 @@ Rules that hold across the whole spectrum:
 - No redundant text: if the title says it, no subtitle repetition; if annotations say it, no title duplication.
 - Markdown formatting in titles (`ggtext::element_markdown`) for selective emphasis (bold the key word, color-highlight a category).
 - Curate axis breaks and limits — breaks that tell the story, not automatic pretty breaks. Use `scales` helpers (`label_comma`, `label_percent`, `label_number`) rather than raw numbers. `expand = expansion(mult = 0)` / `expansion(add = 0)` to control padding.
-- Reorder categorical variables by the value they represent (`fct_reorder`), not alphabetically.
+- Order categories per dataviz-principles: keep intrinsic order (age groups, months, education levels) unless requested otherwise; reorder unordered categories by value via `fct_reorder()` (or frequency via `fct_infreq()`) — not alphabetically (the many-category findability exception applies).
 - Always handle unicode properly (e.g., `ragg` device) to avoid font fallback issues.
 
 ## ➕ Annotations and Callouts
