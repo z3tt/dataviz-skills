@@ -50,8 +50,7 @@ typography:
   fonts:
     - family: Recursive
       source: google
-      wei
-ght: [400, 600]
+      weight: [400, 600]
   base: Recursive
   headings:
     family: Recursive
@@ -87,7 +86,6 @@ Rules:
 2. **Brand consistency sweep**: no stray default colors (e.g., default bootstrap blue), no unbranded headings.
 3. **Alt text present** on every figure; captions non-duplicated.
 4. **Cross-references resolve** — no ?? in output.
-
 5. **Font embedding** in PDFs verified (licensed fonts embedded per license terms).
 6. Story check: a cold reader gets the document's takeaway from headings + figures alone.
 

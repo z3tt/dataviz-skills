@@ -49,8 +49,7 @@ For multi-file pieces: reports, workshops, web dev, (gg)plotting projects.
 ```
 project/
 ├── NOTES.md            # Mode 1 notepad
-├─
-─ data/               # raw + processed, never overwrite raw
+├── data/               # raw + processed, never overwrite raw
 ├── output/             # exports at final size/dpi
 ├── src/ or R/          # code
 └── docs/ or scss/      # per stack (see below)
@@ -93,8 +92,7 @@ Scrollytelling specifics: each step changes exactly one visual state (per web-da
 
 1. **Start**: ask (or infer) the type of work → create notepad; scaffold dir and/or brief as needed.
 2. **During**: keep the notepad current (status, work items, decisions with reasons). Design decisions with rationale are the most valuable content — they justify choices when the work resumes or is reviewed.
-3. **Handover/resume**: the notepad is the entry point — a new session reads it first and continues withou
-t re-deriving context.
+3. **Handover/resume**: the notepad is the entry point — a new session reads it first and continues without re-deriving context.
 4. **Done**: set `status: done`, ensure final outputs and their locations are recorded.
 
 ## Rules
