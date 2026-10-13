@@ -1,6 +1,5 @@
 ---
-name: |
-  web-dataviz
+name: web-dataviz
 description: |
   Use when building HTML-driven interactive data visualizations — standalone D3/ECharts/Observable Plot charts, embedded graphics, scrollytelling pieces, or expressive web-based art. Covers the full web-dev side including HTML boilerplate, SCSS structure, Svelte setup, responsive/accessibility requirements, and deployment, across audiences and purposes from analytical to expressive.
 metadata:
@@ -12,11 +11,11 @@ metadata:
 
 Act as a **creative web developer + data visualization engineer**. Build standalone, embeddable, and scroll-driven data graphics for the web. Default stack: **plain HTML + modern CSS/SCSS + D3.js, no build step**. Escalate to Svelte when reactivity, shared state, or many components make plain DOM updates painful — Svelte is a thin reactive layer around D3, not a rewrite.
 
-##  Scope & Handoff
+## 🔀 Scope & Handoff
 
 This skill covers the **chart/graphic layer** — the visualization itself, its interactivity, and its page as a chart vehicle. When the task is a **complete webpage or app** (portfolio site, multi-page project, custom client web work built with React/Next.js and component libraries like shadcn/ui), load the **web-dev-projects** skill instead — it owns project structure, stack selection, styling conventions, and deployment. Web-dev-projects hands back to this skill for chart internals, so **do not duplicate chart craft there**; and conversely, do not pull Next.js into this skill. One-line rule: *page-first → web-dev-projects; chart-first → stay here.*
 
-##  Stack Selection (in order of preference)
+## 🎯 Stack Selection (in order of preference)
 
 1. **Plain HTML + D3** — the default. One self-contained `.html` file, script via CDN (`https://cdn.jsdelivr.net/npm/d3@7`), zero build. Perfect for standalones, embeds, Codepen-style demos, and most scrollytelling.
 2. **Observable Plot** — fast statistical charts when D3's low-level API is overhead (`https://cdn.jsdelivr.net/npm/@observablehq/plot`); keep D3 for scales/data wrangling underneath.
@@ -26,7 +25,7 @@ This skill covers the **chart/graphic layer** — the visualization itself, its 
 
 Rule of thumb: **the simplest tool that ships.** A build step must buy real value (components, dev speed on a large piece) — otherwise it's friction.
 
-## ️ Plain HTML Boilerplate (memorize this shape)
+## 🏗️ Plain HTML Boilerplate (memorize this shape)
 
 ```html
 <!doctype html>
@@ -56,7 +55,7 @@ Rule of thumb: **the simplest tool that ships.** A build step must buy real valu
 - Fonts: `system-ui` stack by default; webfonts (Google Fonts) only when the piece needs brand identity — subset and `font-display: swap`.
 - **Never** ship an empty `<div>` chart without `aria-label` / fallback text.
 
-##  CSS/SCSS
+## 🎨 CSS/SCSS
 
 **Plain CSS is fine for single files** — custom properties do the theming:
 
@@ -92,55 +91,83 @@ npm i -D d3
 - Svelte transitions (`transition:`) for enter/exit when simple; D3 `.transition()` for data-driven animation.
 - Build to static: `vite build` → deploy `dist/`.
 
-##  The Dataviz Layer (applies to every library)
+## 📊 The Dataviz Layer (applies to every library)
 
-- **Reuse the dataviz-principles skill's rules**: represent-values vs distinguish-groups, title taxonomy (explanatory default), highlight-and-grey, direct labeling over legends, fixed facet scales, honest axes, and its style spectrum (analytical ↈݜݛۋY\ڙۙY8dș^ٜܚ]يH8%ؘ]HHYXوڜܝȕH٘ȘYΈ
-ʝۛ\ˈݙ\Ȝݘ]\ˈ؛ܚ][ۜˈ[و؜ۛڛܙ[ٜ؜H]\݈ٜݙHHYXى܈[ݙ[݈8%ٝ٘[[ܚYڝ܈[]ٜș[Yڝڙ[ȝHYXو\ș^ٜܚ]ًʊH
-ʔؘ[\ȉș]JʎȘ˜ؘ[J؈ڝ^XڝۘZ[܎Ȝ\ܙH]\ȝڝ˝[YT\ܙXݛXٜ܈ژH˘]]՞\Xȓٜٝȝݜ݈ԕȝ\\˂ˈ
-ʔٜܛۜڝٜٛ܊ʎȘژ\ݜȜً\ٛٙ\țۈٜڞوژHٜڞٓ؜ٜݙ\؈ۈHۛݘZ[ٜȊ۝ڛٛ݋ܙ\ڞ٘
-K܈[ȔՑȝڝڙ]Лޘ
-ș۝ZY^ڞڛًȕ\݈]̌͎LΌH
-ʕۛ\ʊΈܚ][ۈڝٝ۝[ٚ[ِۚY[ݔ٘ݘٙ\[ܚYHڙ]ܛܝٜٝȘ۝ٜȝHڛ݋YHۈ[ݜٛX]٘[و\ؘ\XȐXؙ\ܚXۙH[\ۘ]]َȝڜژۙHXٛȝڙ\و٘\ژۙKH
-ʕ؛ܚ][ۜʊΈ͌8$͍L\ˈX\و
-˙X\ِݘژӝ]Y؝[
-KٜܙX݈ٜٙ܋\ٙXٙ[[ݚ[ێȜٙX٘8dȜۘ\[ܝ[ݛKȈȼ'㫈؜ۛ][[قʑY؝[]\ۈ8%ݚXڞHܘ\XȊȜݙ\[و^ʊؘ[ϛXZ[Șۘ\܏HܘܛۛHςȈڙݜوۘ\܏HܝXڞHςȈ]ȚYHؚ\݈Ϗٚ]ςȈٚYݜُ\ݚXۙHۘ\܏Hܝ\ȏ٘ݚ[ۈ]K\ݙ\Ḧș]K[Y\ܘYُHқڝX[ڙ]ȏؠ)ϋܙXݚ[ۏ٘ݚ[ۈ]K\ݙ\Ḧș]K[Y\ܘYُHҚYڛYڝ\ؘ[Ș\٘\ȏؠ)ϋܙXݚ[ۏ٘ݚ[ۈ]K\ݙ\Ḧș]K[Y\ܘYُHЛ۝؜݈ڝ̌ϸ)ϋܙXݚ[ۏ؜ݚXۙOۘZ[ςؘܜܘܛۛHș\ܛ^NșܚYșܚY][\]KXۛ[[܎țZ[ۘ^
-Y܊HZ[ۘ^
-܊Nș؜Ȍܙ[NȟB˜ݚXڞHȜܚ][ێȜݚXڞNȝ܎ȌȚZYڝȌLݚȘ[Yۋ\ٛΈݘ\ݎȟB˜ݙ\Ȝ٘ݚ[ۈțZ[˚ZYڝȎLݚȜY[َȌKٛ͜NȘؘڙܛݛَȜ٘؊͍K͍K͍KΊNȟBЛYYXH
-X^]ڙȍ͎
-HȋܘܛۛHșܚY][\]KXۛ[[܎ȌY܎ȟHBؘH
-ʒ[ݙ\ܙXݚ[ۓ؜ٜݙ\țݙ\Ȝ؜ۛ[XHۜȜڛ\HYXٜʊȊٜۈ\ʎؘ܂؛݈ۜݙ\ȏH؝[Y[݋ܝY\ޔٛXݛܐ[
-˜ݙ\Ȝ٘ݚ[ۈʎۛܝ؜ٜݙ\ȏHٝȒ[ݙ\ܙXݚ[ۓ؜ٜݙ\ʙ[ݜڙ\ȏOȞ[ݜڙ\˙ۜјXڊHOȞȚYȊKڜқݙ\ܙXݚ[يHۛܝY\ܘYوHKݘ\ٙ]٘]\ٝۙ\ܘYَ\]JY\ܘYيNȋˈݘ\YڛYڝڛ\ˈ[ۛݘ][ۂȈ_JNKȜۛݓX\ٚ[ΈˍIHˈٜڛۙȌJNݙ\˙ۜјXڊȏOț؜ٜݙ\˛؜ٜݙJʊNH\و
-ʜ؜ۛ[XJʈ
-΋˘ٛ˚ܙ[]܋ۙ]ۜKܘܛۛ[XX
-Hڙ[Ȝݙ\țٙYۙܙ\܋YڝٛȊʜ؜ݘؚ[يʈ
-8$̈ۙܙ\܈8dșKًȘHYX\Ȝ؜ݘʋH]ٜވݙ\ژ[ٙ\Ȋʙ^XݛHۙJʈڜݘ[ݘ]NȜݙ\ȝ]ژ[ٙH]ٜޝ[و]ۘوܙH٘Y\܋Ȕݙ\Ș\وٛݙ[ؙ\Ț[ȘHݛܞH8%XXڈڝHݘڙX݋H[ؚ[Nȝ\݈HݚXڞH]\ۈۈ٘[SԈ8%Lژݙ܈8dȝ\وLݚH[\ۘ]]و^[ݝΈݘXڙYژ\\܈
-ژ\݈ۛݜȚ[ۚ[وڝ^ݚXڞHۛHۜȘHX\ڙ\ۊKܚ^ۛݘ[؜ۛ[ٛȊ؜ٙݛ8%ܙXZ܈٘Y[وۛ݊KȈȼ'㤈ٝ[و]ۛ[قH
-ʑڝXȔYٜʊȊٜۋX݈ۜY؝[
-NȜٜȸdȔٝ[ٜȸdȔYٜȸdș\ވܛۈXZ[؈ܛ۝
-܈ٛ؜؊KȔڛٛKYڛHYXٜΈݜ݈\ڋȐݜݛۈۘZ[ȊȒȝژHH؛YH[ٛH
-ʓٝYދՙ\ؙ[
-ʈڙ[Ȟ[݈ٙYٝڙ]ș\ޜȜ\Șܘ[ؚ܈ݙ[Hݚ[ΈۛۙX݈ٜˈݚ[ۛ[X[وܛHݛȘݚ[Xۚ\ڈ\݋؋H
-ʑ[Xٙ[و[ٝڙ\يʎȜݘ[٘[ۙHڛHHYܘ[YHܘψڝ΋˸)˘ژ\݋ڝ[ȝ]OHؠ)Ȉؙ[ُHۘ^ވȜݞ[OHݚY̌	N؛ܙ\ΌϏڙܘ[YO؎ȜڞوHYܘ[YHٜܛۜڝٛH
-\ܙX݋\؝[ȝܘ\\ʋȔܝY\ܘYوۜȚYܘ[YxeܝZYڝۛ[][ژ؝[ێȊʘ]ۚY
-ʈ؝[Y[݋ݜڝXY\؈[Xٙ˂ˈٛ]]و]ș]ٜޝڙ\و
-˙]K؜ݘ
-Kݙ\ؘ\وڛ[؛Y\ˈۈܘXٜȸ%Hݜݚ]ٜȘ[ވܝH\ٛܛX[ؙHݙٝșڜܝZ[݈\țۈˈ[ۚ[وܚ]X؛ԔșۜȜڛٛHڛ\ΈݛȝژHѓȟȌΌ؈ވ\ȘXؙ\XۙKݝۜțۙHۘ[ژ\݈ۛܚY\Ș˜ؘ[X
-Ș˜ژ\Xݘۛٝ[\Ț[ܝXYȈȸƯȐXؙ\ܚXڛ]H	ȕٜڙژ؝[ۈ
-X[٘]ܞHٙۜوښ\[يBKȊʐ[^Ș\ژK[Xٛʊțۈ]ٜވژ\݈ۛݘZ[ٜΈ]HXۙ\ȊXۙO؊H\ȘXؙ\ܚXۙH؛ؘڈۜȚٞHڙݜٜˈ[^ۛݜȝH]]ڞ˜ڛؚ\\șۜ۝[NȘژ\݈\H8dș]H\؜ڜ[ۈ8dȚٞH[ܚYڝȘۛ\[Y[݈HڜژۙH؜[ۋۉ݈\X؝H]ˈ
-ʒٞXۘ\يʎȚ[ݙ\ؘݚ]وX\ڜșۘݜؘۙH
-Xڛٙ^ٛ؝\؈ݞ[\ʎȝۛ\Ș[ۈܙ[țۈۘݜΈۈڛݙ\˛ۛH[ݙ\ؘݚ[ۜșۜȘܚ]X؛[ٛ˂̋Ȋʐۛݜ؜݊ʎțXٛ˘[ۛݘ][ۜȸ©HTЈȍHYؚ[ܝHژ\݈ؘڙܛݛو
-[؛Y[و^ݙ\șܚYY[ٛʋȊʐۛܘۚ[و
-șܘ^\ؘ[HڙXڊʈ8%؛YHݘ[٘\و\ȝHY؛ؙYYٜ݋LȜښ[ȝH٘ȘYΈݙ\˛ۛH\ݚ[؝[ۜț]\݈[ۈ^\݈ݘ]X؛H܈ژHH٘ۛوݙKKȊʘٜٙ܋\ٙXٙ[[ݚ[ۊʊȚۛܙY[ș]ٜވ؛ܚ][ۈ[و؜ۛ[ڛX][ۋˈ
-ʔٜܛۜڝوݙY\
-ʎȌ̌ȍ͎ȌLΌ
-Ȝ٘[[ؚ[Hݘڈ\܈
-\\ٙ]ȸ©H
-Kˈ
-ʓۈۛܛۙH\ܛܜʊΈٝڈؚ[\ٜșYܘYHȘHڜژۙH\ܛ܈Y\ܘYً۝Hۘ[ڈYًȊʓYڝݜو\܊ʈ8©HL\ٛܛX[ؙHȌLXؙ\ܚXڛ]Hۜș[XٙȊHܝYوژ\ٜȝHݙٝ
-KKȊʔ݈ۛ]JʎțٜٝȘؚۛȜٛٙ\țۈH݈ۛԕȸ%Hڙ[]ۈ܈[ۚ[وHܚ]X؛]HڜܝLȊʔݛܞHڙXڊʈ
-[؛]X؛[وݜݛۋY\ڙۙYYXٜʎȘHۛ٘Y\Ȝݘ]\ȝHZ٘]؞HYݙ\ȟ͈ٜ٘ۛˈٙۜو[ވ[ݙ\ؘݚ[ۋȑ^ٜܚ]وYXٜȜښ\\ȸ%Hݞ[HܙXݜݛHݛ\șܛۈ]]ڞ˜ڛؚ\\Ș\KȈȸǣٜٝˈۘ[ڈژ\݈ۛݘZ[ٜ܈ڝݝX\ڝ\؜ژHۛݙ^
-ݚHԈڛڛ]ʂˈݙ\˘ۚXڈ\ȝH
-ۛ۞Jȝ؞HȜ٘YH؛YH
-ۛ\[ۛHXٛșۜȚٞH]JBˈڞY^[ڙțۈژ\ݜΈ[˙X۝[ؙYڛٛ݋ܙ\ڞ٘[ٛ\܂ˈ؜ۛ][[وڙ\وHܘ\XȚݛ\ț^[ݝ]XXڈݙ\
-ۛHX\ڜ˚YڛYڝȘژ[ٙJBˈݚ[ۛ[وۜȘHڛٛHݘ]XȘژ\݂ˈ]]ܛ^Z[و؛ܚ][ۜȏȌ\Έ\؛^
-șڞYؘڙܛݛٜȊȜ؜ۛ[ڛX][ۈۛXڛٙˈښ\[وHٙXٙ[[ݚ[ۈڙXڈ[ȑț]]][ۜȘ[و[ݙ\ܙXݚ[ۓ؜ٜݙ\ȜYXٜ
+- **Reuse the dataviz-principles skill's rules**: represent-values vs distinguish-groups, title taxonomy (explanatory default), highlight-and-grey, direct labeling over legends, fixed facet scales, honest axes, and its style spectrum (analytical → custom-designed → expressive) — locate the piece first. The web adds: **tooltips, hover states, transitions, and scroll choreography must serve the piece's intent — reveal insight, or deliver delight when the piece is expressive.**
+- **Scales & data**: `d3.scale*` with explicit domains; parse dates with `d3.timeParse`, numbers via `d3.autoType`. Never trust CSV types.
+- **Responsiveness**: charts re-render on resize via `ResizeObserver` on the container (not `window.resize`), or an SVG with `viewBox` + fluid text sizing. Test at 320px, 768px, 1280px.
+- **Tooltips**: position with `getBoundingClientRect`, keep inside viewport, never cover the point, hide on `mouseleave` and `Escape`. Accessible alternative: visible labels where feasible.
+- **Transitions**: 250–750ms, ease (`d3.easeCubicOut` default), respect `prefers-reduced-motion: reduce` → snap instantly.
+
+## 🎬 Scrollytelling
+
+**Default pattern — sticky graphic + stepping text:**
+
+```html
+<main class="scrolly">
+  <figure class="sticky">
+    <div id="chart"></div>
+  </figure>
+  <article class="steps">
+    <section data-step="0" data-message="Initial view">…</section>
+    <section data-step="1" data-message="Highlight urban areas">…</section>
+    <section data-step="2" data-message="Contrast with 2000">…</section>
+  </article>
+</main>
+```
+
+```css
+.scrolly { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 4fr); gap: 2rem; }
+.sticky { position: sticky; top: 0; height: 100svh; align-self: start; }
+.steps section { min-height: 90svh; padding: 1.5rem; background: rgba(255,255,255,.9); }
+@media (max-width: 768px) { .scrolly { grid-template-columns: 1fr; } }
+```
+
+- **IntersectionObserver over scrollama for simple pieces** (zero deps):
+
+```js
+const steps = document.querySelectorAll(".steps section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) {
+    const message = e.target.dataset.message;
+    update(message); // swap highlight, filter, annotation
+  }});
+}, { rootMargin: "-45% 0px", threshold: 0 });
+steps.forEach(s => observer.observe(s));
+```
+
+- Use **scrollama** (`https://cdn.jsdelivr.net/npm/scrollama`) when steps need progress-driven **scrubbing** (0–1 progress → e.g. a year scrub).
+- Every step changes **exactly one** visual state; steps that change everything at once lose readers. Steps are sentences in a story — each with a subject.
+- Mobile: test the sticky pattern on real iOS — `100vh` bugs → use `100svh`.
+- Alternative layouts: stacked chapters (chart flows inline with text, sticky only for a map/hero), horizontal scroll panels (careful — breaks reading flow).
+
+## 🌐 Getting It Online
+
+- **GitHub Pages** (zero-cost default): repo → Settings → Pages → deploy from `main` `/root` (or `/docs`). Single-file pieces: just push. Custom domain + HTTPS via the same panel.
+- **Netlify/Vercel** when you need preview deploys per branch or Svelte builds: connect repo, build command `npm run build`, publish `dist/`.
+- **Embedding elsewhere**: standalone file = `<iframe src="https://…/chart.html" title="…" loading="lazy" style="width:100%;border:0"></iframe>`; size the iframe responsively (aspect-ratio wrapper). PostMessage for iframe↔host height communication; **avoid** `document.write`-era embeds.
+- Relative paths everywhere (`./data.csv`), lowercase filenames, no spaces — survives any host.
+- Performance budget: first paint < 1s on 4G. Inline critical CSS for single files; full D3 via CDN ~ 280kb gz is acceptable, but for one small chart consider `d3-scale` + `d3-shape` submodules instead.
+
+## ♿ Accessibility & Verification (mandatory before shipping)
+
+1. **Alt text / aria-labels** on every chart container; data tables (`<table>`) as accessible fallback for key figures. Alt text follows the dataviz-principles formula: chart type → data description → key insight; complement the visible caption, don't duplicate it.
+2. **Keyboard**: interactive marks focusable (`tabindex`, `:focus` styles); tooltips also open on focus; no pointer-only interactions for critical info.
+3. **Contrast**: labels/annotations ≥ APCA Lc 45 against the chart background (including text over gridded panels).
+4. **Colorblind + grayscale check** — same standard as the advanced-ggplot-2 skill; the web adds: hover-only distinctions must also exist statically or via a second cue.
+5. **`prefers-reduced-motion`** honored in every transition and scroll animation.
+6. **Responsive sweep**: 320 / 768 / 1280px + real mobile touch pass (tap targets ≥ 40px).
+7. **No console errors**; fetch failures degrade to a visible error message, not a blank page.
+8. **Lighthouse pass** ≥ 90 performance / 100 accessibility for embeds (the host page shares the budget).
+9. **Slow data**: never block render on a slow CSV — skeleton or inline the critical data first.
+10. **Story check** (analytical and custom-designed pieces): a cold reader states the takeaway after ~5 seconds, before any interaction. Expressive pieces skip this — the style spectrum rules from dataviz-principles apply.
+
+## ❌ Never
+
+- Blank chart containers without markup/aria context ("the JS will fill it")
+- Hover/click as the *only* way to read a value (tooltip-only labels for key data)
+- Fixed pixel widths on charts; un-debounced `window.resize` handlers
+- Scrollytelling where the graphic jumps layout at each step (only marks/highlights change)
+- Build tooling for a single static chart
+- Autoplaying transitions > 1s; parallax + fixed backgrounds + scroll animation combined
+- Skipping the reduced-motion check in D3 mutations and IntersectionObserver pieces
