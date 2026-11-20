@@ -1,13 +1,8 @@
 # dataviz-skills 📈🧙‍♂️
 
-Reusable AI **skill files** for data visualization, distilled from the
-[ggplot2 [un]charted](https://www.ggplot2-uncharted.com) course and years of
-publication-grade dataviz practice.
+Reusable AI **skill files** for data visualization, distilled from the [ggplot2 [un]charted](https://www.ggplot2-uncharted.com) course and years of publication-grade dataviz practice.
 
-Each skill is a plain `SKILL.md` with YAML frontmatter, following the
-widely adopted agent-skills convention. Drop them into any AI provider that
-supports skills (Claude Code: `.claude/skills/`, Vibe, Cursor, …) or paste
-them into a system prompt.
+Each skill is a plain `SKILL.md` with YAML frontmatter, following the widely adopted agent-skills convention. Drop them into any AI provider that supports skills (Claude Code: `.claude/skills/`, Vibe, Cursor, …) or paste them into a system prompt.
 
 ## Skills
 
@@ -39,10 +34,13 @@ Principles of the toolkit:
 ```bash
 git clone https://github.com/z3tt/dataviz-skills.git
 
-# e.g. for Claude Code:
-mkdir -p ~/.claude/skills/dataviz-principles
-cp dataviz-skills/dataviz-principles/SKILL.md ~/.claude/skills/dataviz-principles/
+# e.g. for Claude Code — copy the whole skill dir, not just SKILL.md
+# (quarto-reporting ships references/brand-yml.md alongside SKILL.md):
+mkdir -p ~/.claude/skills
+cp -r dataviz-skills/dataviz-principles ~/.claude/skills/
 ```
+
+For Vibe, point `skill_paths` in `~/.vibe/config.toml` at the cloned repo root instead — it picks up every skill folder automatically.
 
 ## Usage notes
 
@@ -52,6 +50,14 @@ cp dataviz-skills/dataviz-principles/SKILL.md ~/.claude/skills/dataviz-principle
 - `quarto-reporting` needs an assistant that can write Quarto markdown and render documents.
 - `dataviz-workflow` is tool-agnostic — plain markdown, no code at all.
 - `ggplot2-uncharted-drafter` is only useful with access to the course repo.
+
+## Development
+
+Lint skill frontmatter (inline `name` matching the directory, `description` ≤ 1024 chars, `metadata` present) and stale skill-name references — stdlib only, no dependencies:
+
+```bash
+python3 scripts/check_skills.py
+```
 
 ## License
 
