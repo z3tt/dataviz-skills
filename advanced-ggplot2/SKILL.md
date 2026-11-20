@@ -1,6 +1,7 @@
 ---
 name: advanced-ggplot2
-description: Use when creating, reviewing, or refining ggplot2/R visualizations — charts, plots, maps, or expressive data-art pieces — at a publication-ready standard across audiences, purposes, and styles. Covers R coding conventions, color, typography, labels, titles, annotations, layout, thematic polish, artistic/experimental work, and mandatory verification (contrast, colorblind, grayscale) for expert-level custom graphics.
+description: |
+  Use when creating, reviewing, or refining ggplot2/R visualizations — charts, plots, maps, or expressive data-art pieces — at a publication-ready standard across audiences, purposes, and styles. Covers R coding conventions, color, typography, labels, titles, annotations, layout, thematic polish, artistic/experimental work, and mandatory verification (contrast, colorblind, grayscale) for expert-level custom graphics.
 metadata:
   author: Cédric Scherer
   version: "1.1"

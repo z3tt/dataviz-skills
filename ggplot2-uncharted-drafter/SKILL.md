@@ -2,6 +2,9 @@
 name: ggplot2-uncharted-drafter
 description: |
   Use when drafting or editing ggplot2 [un]charted lessons or exercises in .tsx files. Load for any task involving course Content.tsx, TopOfPost.tsx, exercises.tsx, or quizzQuestion.tsx files.
+metadata:
+  author: Cédric Scherer
+  version: "1.0"
 ---
 
 # ggplot2 [un]charted Course Drafter
@@ -60,8 +63,7 @@ red `#d13760` · orange `#e75f00` · gold `#c69612` · teal `#00978a` · blue `#
 
 ### 4. Components
 
-Use only the course component vocabulary (reuse patterns from references):
-`Sidenote` · `ResponsiveREditor` (from `@/components/REditor`) · `ExerciseAccordion` · `DidYouKnowCard` · `ExerciseDoubleSandbox` · `CodeBlock` · `DatasetPreviewButton` · `Tabs`/`TabsList`/`TabsTrigger`/`TabsContent` (from `@/components/ui/tabs`) · `MultipleQuizzWrapper`/`MultipleChoice` · `RPlotWithSandbox` · `Caption` · `Confetti` · `BeforeAfterSlider` · `Spacing`.
+Use only the course component vocabulary (reuse patterns from references): `Sidenote` · `ResponsiveREditor` (from `@/components/REditor`) · `ExerciseAccordion` · `DidYouKnowCard` · `ExerciseDoubleSandbox` · `CodeBlock` · `DatasetPreviewButton` · `Tabs`/`TabsList`/`TabsTrigger`/`TabsContent` (from `@/components/ui/tabs`) · `MultipleQuizzWrapper`/`MultipleChoice` · `RPlotWithSandbox` · `Caption` · `Confetti` · `BeforeAfterSlider` · `Spacing`.
 
 **Never** introduce new components unless explicitly requested.
 

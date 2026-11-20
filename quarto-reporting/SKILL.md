@@ -2,6 +2,9 @@
 name: quarto-reporting
 description: |
   Use when creating Quarto documents, reports, dashboards, or presentations that embed data visualizations — covering brand-styled outputs via _brand.yml, corporate colors and typography in HTML/PDF, figure and alt-text options, cross-references, and publishing. Provider-agnostic: works in any AI coding assistant, not tied to one ecosystem.
+metadata:
+  author: Cédric Scherer
+  version: "1.0"
 ---
 
 # Quarto Reporting — Branded, Publication-Ready Documents
