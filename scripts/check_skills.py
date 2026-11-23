@@ -16,13 +16,14 @@ match it — catches stale names after renames.
 Usage: python3 scripts/check_skills.py [repo_root]   (default: cwd)
 Exit code 0 = clean, 1 = problems found.
 """
+import os
 import re
 import sys
 from difflib import SequenceMatcher
 from pathlib import Path
 
 NAME_RE = re.compile(r"^[a-z0-9-]+$")
-TOKEN_RE = re.compile(r"\b[a-z0-9]+(?:-[a-z0-9]+)+\b")
+TOKEN_RE = re.compile(r"\b[a-z0-9]+(?:-[a-z0-9]+)+\b", re.IGNORECASE)
 URL_RE = re.compile(r"https?://\S+")
 MAX_DESC = 1024
 
@@ -90,11 +91,23 @@ def check_skill(path, errors):
             errors.append(f"{path}: metadata missing version")
 
 
+def iter_md_files(root):
+    """Yield *.md under root, pruning nested git repos (a checked-out second
+    repo must not be scanned — its files belong to that repo's own lint)."""
+    for dirpath, dirnames, filenames in os.walk(root):
+        dirnames[:] = [
+            d for d in dirnames
+            if d != ".git" and not os.path.exists(os.path.join(dirpath, d, ".git"))
+        ]
+        for fn in filenames:
+            if fn.endswith(".md"):
+                yield Path(dirpath) / fn
+
+
 def check_refs(root, skill_names, errors):
-    md_files = [p for p in root.rglob("*.md") if ".git" not in p.parts]
-    for p in md_files:
+    for p in iter_md_files(root):
         text = URL_RE.sub(" ", p.read_text(encoding="utf-8"))
-        for tok in set(TOKEN_RE.findall(text)):
+        for tok in {t.lower() for t in TOKEN_RE.findall(text)}:
             if tok in skill_names or "/" in tok:
                 continue
             close = max(skill_names, key=lambda s: SequenceMatcher(None, tok, s).ratio())
