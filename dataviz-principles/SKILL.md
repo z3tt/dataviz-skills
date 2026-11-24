@@ -27,7 +27,8 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 
 - **Analytical** — scientific figures, reports, dashboards. Insight is everything: honest axes, restrained color, explanatory titles, full precision rulebook.
 - **Custom-designed** — publication- or brand-styled charts and maps. Insight still leads; visual identity matters: curated palettes, typographic hierarchy, considered composition. Precision rules still apply.
-- **Expressive** — striking forms, artistic pieces, generative work. Aesthetic impact leads; insight is welcome but optional. Axes, grids, legends, and the title taxonomy may go; craft and composition are scrutinized most.
+- **Expressive** — striking forms, artistic pieces, generative work. Aesthetic impact leads; insight is welcome but optional. Axes, grids, legends, and the title taxonomy 
+may go; craft and composition are scrutinized most.
 
 - Rules relax progressively along the spectrum — but **honesty does not**: real data, no fabricated values, sources cited, and no piece presented as something it isn't. The framing itself is part of honesty.
 - **Unusual form does not imply expressive intent.** Hex/tile grids, rose/petal charts, circular layouts, stream graphs, and other exotic forms are often the *clearest honest choice* for the data (geography that misleads, seasonal cycles, flows) — apply the precision rulebook unless aesthetic impact, not insight, is the goal.
@@ -44,7 +45,8 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 - Think in *data → aesthetic mappings*, not "make a bar chart." Encodings first, chart type second.
 - Prefer position- and length-based encodings over area/angle/color-only encodings when precision matters; let aesthetic goals promote otherwise.
 - Bars and areas need a zero baseline; avoid truncated axes for them. Truncation elsewhere needs a visual cue and a stated reason.
-- **Order categories by what they represent, not alphabetically.** Intrinsic order (age groups, months, education levels) → keep it unless requested otherwise. No intrinsic order (species, products) → order by value, frequency, or relevance. Exception: with many categories (countries, states), alphabetical can serve the reader better — finding one's own entry beats ranking. A meaningful default, not a law — exceptions are always fine when the reasoning is valid and it improves storytelling and readability.
+- **Order categories by what they represent, not alphabetically.** Intrinsic order (age groups, months, education levels) → keep it unless requested otherwise. No intrinsic order (species, products) → order by value, frequency, or relevance. Exception: with many categories (countries, states), alphabetical can serve the reader better — finding one's own entry beats ranking. A meani
+ngful default, not a law — exceptions are always fine when the reasoning is valid and it improves storytelling and readability.
 - Direct labeling instead of legends when possible (< ~4 groups).
 - Small multiples over one overloaded chart; exotic forms (tile/hex grids, cartograms) when real geography or layout would distort the message.
 - Consistency is key: keep scales **fixed across panels**; "free" axes only when within-panel trends matter far more than cross-panel comparison.
@@ -63,7 +65,8 @@ Design intent is a **gradient from scientific/analytical to mesmerizing/artsy**,
 - Qualitative: unique hues, equal visual weight. No strict cap, but the more categories, the worse it reads — past ~4–6 start considering other solutions (faceting, grouping, small multiples); 8 is the practical ceiling.
 - Sequential (low→high): single- or multi-hue gradient, perceptually uniform.
 - Diverging (deviation from a meaningful center): two opposing hues around a neutral midpoint, set deliberately.
-- **Never rainbow**; avoid red-green; consider colorblind accessibility at every stage of the spectrum.
+- **Never rainbow**; avoid red-green; consider colorblind accessibility at every stage of th
+e spectrum.
 - For emphasis: one highlight color, grey for everything else ("highlight and grey").
 - Palettes are starting points — tweak and subset to fit the data; expressive pieces gain color freedom but keep intent and contrast.
 
@@ -85,7 +88,8 @@ Defaults to reach for when nothing is specified, or when the user asks for "my f
   - **American Yellow** `#B48200` / **`#EFAC00`** / `#FFCE52` / `#FFEDC2` — corporate main
   - **Lavender Indigo** `#663399` / **`#9C55E3`** / `#B988EB` / `#E6D9F2` — corporate main
   - **Blue Bolt** `#007CB1` / **`#00B3FF`** / `#62D0FF` / `#C9EFFF` — secondary (not in the logo, part of the set)
-  - **Dark Liver (grey)** `#292929` / `#505050` / `#818181` / `#D3D3D3` — neutral, for de-emphasized categories ("grey for everything else")
+  - **Dark Liver (grey)** `#29292
+9` / `#505050` / `#818181` / `#D3D3D3` — neutral, for de-emphasized categories ("grey for everything else")
   - For the highlight-and-grey pattern: any corporate main as the highlight, Dark Liver as the grey.
 - These are starting points, not a house style — curate per piece as always.
 

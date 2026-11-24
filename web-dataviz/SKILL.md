@@ -11,21 +11,22 @@ metadata:
 
 Act as a **creative web developer + data visualization engineer**. Build standalone, embeddable, and scroll-driven data graphics for the web. Default stack: **plain HTML + modern CSS/SCSS + D3.js, no build step**. Escalate to Svelte when reactivity, shared state, or many components make plain DOM updates painful — Svelte is a thin reactive layer around D3, not a rewrite.
 
-## 🔀 Scope & Handoff
+## Scope & Handoff
 
 This skill covers the **chart/graphic layer** — the visualization itself, its interactivity, and its page as a chart vehicle. When the task is a **complete webpage or app** (portfolio site, multi-page project, custom client web work built with React/Next.js and component libraries like shadcn/ui), load the **web-dev-projects** skill instead — it owns project structure, stack selection, styling conventions, and deployment. Web-dev-projects hands back to this skill for chart internals, so **do not duplicate chart craft there**; and conversely, do not pull Next.js into this skill. One-line rule: *page-first → web-dev-projects; chart-first → stay here.*
 
-## 🎯 Stack Selection (in order of preference)
+## Stack Selection (in order of preference)
 
 1. **Plain HTML + D3** — the default. One self-contained `.html` file, script via CDN (`https://cdn.jsdelivr.net/npm/d3@7`), zero build. Perfect for standalones, embeds, Codepen-style demos, and most scrollytelling.
-2. **Observable Plot** — fast statistical charts when D3's low-level API is overhead (`https://cdn.jsdelivr.net/npm/@observablehq/plot`); keep D3 for scales/data wrangling underneath.
+2. **Observable Plot** — fast statistical charts when D3's low-level API is overhead (`https://cdn.jsdelivr.net/npm/@observablehq/plot`); keep 
+D3 for scales/data wrangling underneath.
 3. **ECharts** (`echarts`) — when you need heavy canned interactivity fast (dashboards, complex linked views) and accept opinionated defaults.
 4. **Svelte + D3** — for reactive, multi-component, or state-driven pieces. Common pattern in the dataviz community: Svelte handles DOM updates, state, and layout reactively while D3 does what it's best at (scales, shapes, joins, transitions) — this makes D3 *easier*, not harder. Don't reserve it for "app-like" complexity only; reach for it whenever manual DOM syncing in plain D3 gets tedious.
 5. **Tableau/Flourish embeds** — never; code gives control.
 
 Rule of thumb: **the simplest tool that ships.** A build step must buy real value (components, dev speed on a large piece) — otherwise it's friction.
 
-## 🏗️ Plain HTML Boilerplate (memorize this shape)
+## Plain HTML Boilerplate (memorize this shape)
 
 ```html
 <!doctype html>
@@ -55,9 +56,10 @@ Rule of thumb: **the simplest tool that ships.** A build step must buy real valu
 - Fonts: `system-ui` stack by default; webfonts (Google Fonts) only when the piece needs brand identity — subset and `font-display: swap`.
 - **Never** ship an empty `<div>` chart without `aria-label` / fallback text.
 
-## 🎨 CSS/SCSS
+## CSS/SCSS
 
-**Plain CSS is fine for single files** — custom properties do the theming:
+**Plain CSS is fine for single files** 
+— custom properties do the theming:
 
 ```css
 :root { --ink: #1a1a1a; --muted: #666; --accent: #e63946; --bg: #fff; --grid: #eee; }
@@ -77,7 +79,7 @@ scss/
 - Tokens over literals: never scatter hex codes through component styles.
 - Chart CSS belongs in CSS, not inline JS attributes — position/size via CSS; D3 for data-driven marks.
 
-## ⚡ Svelte Setup (the reactive D3 path)
+## Svelte Setup (the reactive D3 path)
 
 Svelte's role is **reactive glue around D3**, not a replacement: D3 keeps owning scales/shapes/transitions, Svelte owns the DOM skeleton, state, and reactivity. Set up:
 
@@ -91,15 +93,16 @@ npm i -D d3
 - Svelte transitions (`transition:`) for enter/exit when simple; D3 `.transition()` for data-driven animation.
 - Build to static: `vite build` → deploy `dist/`.
 
-## 📊 The Dataviz Layer (applies to every library)
+## The Dataviz Layer (applies to every library)
 
-- **Reuse the dataviz-principles skill's rules**: represent-values vs distinguish-groups, title taxonomy (explanatory default), highlight-and-grey, direct labeling over legends, fixed facet scales, honest axes, and its style spectrum (analytical → custom-designed → expressive) — locate the piece first. The web adds: **tooltips, hover states, transitions, and scroll choreography must serve the piece's intent — reveal insight, or deliver delight when the piece is expressive.**
+- **Reuse the dataviz-principles skill's rules**: represent-values vs distinguish-groups, title taxonomy (explanatory default), highlight-and-grey, direct labeling over legends, fixed facet scales, honest axes, and its style spectrum (analytical → custom-designed → expressive) — locate the piece first. The web adds: **tooltips, hover states, transitions, and scroll choreography must serve the piece's 
+intent — reveal insight, or deliver delight when the piece is expressive.**
 - **Scales & data**: `d3.scale*` with explicit domains; parse dates with `d3.timeParse`, numbers via `d3.autoType`. Never trust CSV types.
 - **Responsiveness**: charts re-render on resize via `ResizeObserver` on the container (not `window.resize`), or an SVG with `viewBox` + fluid text sizing. Test at 320px, 768px, 1280px.
 - **Tooltips**: position with `getBoundingClientRect`, keep inside viewport, never cover the point, hide on `mouseleave` and `Escape`. Accessible alternative: visible labels where feasible.
 - **Transitions**: 250–750ms, ease (`d3.easeCubicOut` default), respect `prefers-reduced-motion: reduce` → snap instantly.
 
-## 🎬 Scrollytelling
+## Scrollytelling
 
 **Default pattern — sticky graphic + stepping text:**
 
@@ -136,12 +139,13 @@ const observer = new IntersectionObserver(entries => {
 steps.forEach(s => observer.observe(s));
 ```
 
-- Use **scrollama** (`https://cdn.jsdelivr.net/npm/scrollama`) when steps need progress-driven **scrubbing** (0–1 progress → e.g. a year scrub).
+- Use **scrollama** (`https://cdn.jsdelivr.net/npm/scrollama
+`) when steps need progress-driven **scrubbing** (0–1 progress → e.g. a year scrub).
 - Every step changes **exactly one** visual state; steps that change everything at once lose readers. Steps are sentences in a story — each with a subject.
 - Mobile: test the sticky pattern on real iOS — `100vh` bugs → use `100svh`.
 - Alternative layouts: stacked chapters (chart flows inline with text, sticky only for a map/hero), horizontal scroll panels (careful — breaks reading flow).
 
-## 🌐 Getting It Online
+## Getting It Online
 
 - **GitHub Pages** (zero-cost default): repo → Settings → Pages → deploy from `main` `/root` (or `/docs`). Single-file pieces: just push. Custom domain + HTTPS via the same panel.
 - **Netlify/Vercel** when you need preview deploys per branch or Svelte builds: connect repo, build command `npm run build`, publish `dist/`.
@@ -149,11 +153,12 @@ steps.forEach(s => observer.observe(s));
 - Relative paths everywhere (`./data.csv`), lowercase filenames, no spaces — survives any host.
 - Performance budget: first paint < 1s on 4G. Inline critical CSS for single files; full D3 via CDN ~ 280kb gz is acceptable, but for one small chart consider `d3-scale` + `d3-shape` submodules instead.
 
-## ♿ Accessibility & Verification (mandatory before shipping)
+## Accessibility & Verification (mandatory before shipping)
 
 1. **Alt text / aria-labels** on every chart container; data tables (`<table>`) as accessible fallback for key figures. Alt text follows the dataviz-principles formula: chart type → data description → key insight; complement the visible caption, don't duplicate it.
 2. **Keyboard**: interactive marks focusable (`tabindex`, `:focus` styles); tooltips also open on focus; no pointer-only interactions for critical info.
-3. **Contrast**: labels/annotations ≥ APCA Lc 45 against the chart background (including text over gridded panels).
+3. **Contrast**: labels/annotations ≥ APCA Lc 45 against the chart background (including text over gridded 
+panels).
 4. **Colorblind + grayscale check** — same standard as the advanced-ggplot2 skill; the web adds: hover-only distinctions must also exist statically or via a second cue.
 5. **`prefers-reduced-motion`** honored in every transition and scroll animation.
 6. **Responsive sweep**: 320 / 768 / 1280px + real mobile touch pass (tap targets ≥ 40px).
@@ -162,7 +167,7 @@ steps.forEach(s => observer.observe(s));
 9. **Slow data**: never block render on a slow CSV — skeleton or inline the critical data first.
 10. **Story check** (analytical and custom-designed pieces): a cold reader states the takeaway after ~5 seconds, before any interaction. Expressive pieces skip this — the style spectrum rules from dataviz-principles apply.
 
-## ❌ Never
+## Never
 
 - Blank chart containers without markup/aria context ("the JS will fill it")
 - Hover/click as the *only* way to read a value (tooltip-only labels for key data)

@@ -13,12 +13,12 @@ Act as a **reporting engineer**: turn data, analysis, and charts into polished Q
 
 Reuses the sibling skills: `dataviz-principles` for chart design decisions, `advanced-ggplot2` for the R/ggplot2 figures inside, `web-dataviz` when embedded web graphics are involved.
 
-## 🎯 When Quarto + brand.yml is the right call
+## When Quarto + brand.yml is the right call
 
 - Repeated report formats for a brand/client → `_brand.yml` once, applied everywhere.
 - One-off exploratory document → skip brand.yml, use sensible YAML options inline.
 
-## 🏗️ Project Setup
+## Project Setup
 
 ```
 project/
@@ -33,7 +33,7 @@ project/
 - Brand via `_brand.yml` at project root (auto-discovered); no per-document hex hunting.
 - Keep front matter minimal; put repeated options in `_quarto.yml`.
 
-## 🎨 Branding via _brand.yml
+## Branding via _brand.yml
 
 Read `references/brand-yml.md` for the full field reference. The essentials:
 
@@ -51,7 +51,8 @@ color:
 
 typography:
   fonts:
-    - family: Recursive
+    - 
+family: Recursive
       source: google
       weight: [400, 600]
   base: Recursive
@@ -67,7 +68,7 @@ Rules:
 - Light/dark variants for outputs that support them.
 - Fonts: prefer hosted sources (Google Fonts) or project-local files for licensed fonts — check the license for embedding before PDF export.
 
-## 📊 Figures Inside Quarto
+## Figures Inside Quarto
 
 - Chunk options: `fig-width`, `fig-fig-height`, `fig-asp`, `out-width`, `fig-cap`, `#| label: fig-*` for cross-references.
 - **`fig-alt` on every figure** — three-part alt text (chart type → data description → key insight), complementing the caption.
@@ -75,7 +76,7 @@ Rules:
 - `#| column: page` or `column-span` for full-width figures; subfloats for grouped figures.
 - Tables: `knitr::kable()` + `gt` for styled tables; `tbl-cap` and `label: tbl-*` for cross-refs.
 
-## ✍️ Document Craft
+## Document Craft
 
 - Explanatory headings that state the takeaway, mirroring chart title philosophy.
 - Cross-references (`@fig-...`, `@tbl-...`) over manual "see figure 3".
@@ -83,16 +84,17 @@ Rules:
 - Callouts (`::: {.callout}`) for caveats and methods notes; footnotes over parentheticals.
 - Custom SCSS layered on brand tokens — don't override brand colors ad hoc; extend the palette in `_brand.yml` instead.
 
-## 🔎 Verification Before Delivery
+## Verification Before Delivery
 
 1. **Render both formats** if more than one is targeted (HTML + PDF) — fonts and layout break differently.
 2. **Brand consistency sweep**: no stray default colors (e.g., default bootstrap blue), no unbranded headings.
 3. **Alt text present** on every figure; captions non-duplicated.
-4. **Cross-references resolve** — no ?? in output.
+4. 
+**Cross-references resolve** — no ?? in output.
 5. **Font embedding** in PDFs verified (licensed fonts embedded per license terms).
 6. Story check: a cold reader gets the document's takeaway from headings + figures alone.
 
-## ❌ Never
+## Never
 
 - Hard-coded hex codes scattered through `.qmd` files — they live in `_brand.yml`
 - Figures without `fig-alt`

@@ -16,7 +16,7 @@ Your **only job** is to edit `.tsx` files in the **current lesson directory** to
 
 **NEVER** modify reference files or files outside the current directory.
 
-## 📌 Core Rules (Non-Negotiable)
+## Core Rules (Non-Negotiable)
 
 ### 1. Lesson Anatomy
 
@@ -38,7 +38,8 @@ Recurring **Content section flow** (adapt, don't force):
 ### 2. Style & Tone
 
 - **Voice**: Light, playful, second person, code-first. Explain jargon in one sentence. Meta-jokes allowed ("Doesn't that sound great? 😄").
-- **Paragraphs**: 1–3 sentences max. No walls of text. No filler ("In this section, we'll…" → "Let's…"). No summaries/teasers between sections.
+- **Paragraphs**: 1–3 sentences max. No walls of text. No filler ("In this section, we'll…" → "Let's…"). No summaries/teasers b
+etween sections.
 - **Headings** (`<h2>`, `<h3>`): start with **one emoji**, title case, max ~7 words (e.g., `🧱 Building Plots Like Sentences`, `🪤 Palette Pitfalls`, `🐇 Going Down the Rabbit Hole` for optional depth).
 - **Sidenotes**: witty, max 2 sentences, often self-aware ("Yes, we might be biased but…"). Use `<details>` collapses for "No idea? Here's the explanation 🤗".
 
@@ -69,7 +70,8 @@ Use only the course component vocabulary (reuse patterns from references): `Side
 
 ### 5. R Code Conventions (in sandboxes)
 
-- `library(ggplot2)` at the top of every snippet.
+- `library(ggplot2)` at the top of ever
+y snippet.
 - **Mixed style as course standard**: `ggplot(mpg, aes(displ, hwy))` — clean, saves typing `data =`/`mapping =`.
 - `.trim()` on every `initialRCode={…}` template literal.
 - Comments mark intent (`# all arguments are named`, `# no arguments are named`).
@@ -107,7 +109,8 @@ The course uses fixed fonts in its R code examples — follow them when lessons 
 - **Domine** — plot titles
 - Loaded via `showtext`/`sysfonts` in lesson sandboxes (`font_add(...)`, `theme(..., family = ...)`).
 
-Any lesson that renders custom fonts gets an install-hint box before the first such snippet:
+Any lesson that renders custom fonts gets an install-hint box before the first such sn
+ippet:
 
 ```tsx
 <SideNote emoji="🛠️" title="Before You Run the Next Codes">
@@ -117,7 +120,7 @@ Any lesson that renders custom fonts gets an install-hint box before the first s
 
 These are *course* fonts tied to the course's visual identity — do not swap them for other or personal typefaces.
 
-## ✅ Do This (Example Section)
+## Do This (Example Section)
 
 ```tsx
 <h2>🎨 Color It Your Way</h2>
@@ -144,7 +147,7 @@ These are *course* fonts tied to the course's visual identity — do not swap th
 </div>
 ```
 
-## ❌ Never Do This
+## Never Do This
 
 | Violation | Bad | Fix |
 |---|---|---|
@@ -156,9 +159,10 @@ These are *course* fonts tied to the course's visual identity — do not swap th
 | Modifying reference files | Editing `module1/aesthetics/…` | Only edit current lesson |
 | Ignoring dataset preferences | Using `mtcars` | Use `mpg` or penguins |
 
-## 🔍 Reference Phase (Always Do This First)
+## Reference Phase (Always Do This First)
 
 1. **Read** the 4 reference files (TopOfPost + Content for `module1/aesthetics` and `module3/styling-text`).
 2. **Adopt** their heading hierarchy, paragraph length, tone, component patterns, highlight semantics, and section flow.
 3. **Open** the target file(s) in the current lesson directory. Empty → create from reference patterns (after confirmation). Existing → align to reference style.
-4. **Never** scan unrelated directories unless explicitly requested.
+4. **Never** scan unrelated directories unless explicitly request
+ed.
